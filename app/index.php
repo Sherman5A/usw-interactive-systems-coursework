@@ -1,8 +1,9 @@
 <?php include("templates/header.php"); ?>
 
-<div>
-  test
-</div>
+  <div>
+    test
+  </div>
+
 
 <?php include("templates/footer.php"); ?>
 
