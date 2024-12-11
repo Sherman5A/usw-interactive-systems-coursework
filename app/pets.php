@@ -3,7 +3,7 @@
   $template = /** @lang HTML */
     <<<EOT
     <div>
-      Index
+      Pets
     </div>
 EOT;
   include("private/template.php");

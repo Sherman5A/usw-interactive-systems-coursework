@@ -3,7 +3,7 @@
   $template = /** @lang HTML */
     <<<EOT
     <div>
-      Index
+      Contact us
     </div>
 EOT;
   include("private/template.php");
