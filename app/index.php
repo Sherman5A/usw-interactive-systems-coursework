@@ -34,6 +34,7 @@
   //  echo "<p>Title $title</p>";
 
 ?>
+<!DOCTYPE html>
 <html lang="en">
   <?php require $view; ?>
 </html>

@@ -70,14 +70,61 @@ a:hover {
 }
 
 /* Layout */
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: var(--main-bg-colour);
   font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Main layout */
-body.main-content {
+body > footer {
+  min-height: 80px;
+}
+
+.main-content {
+  flex: 1;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*Header layout */
+.nav-bar {
+  display: flex;
+  background-color: var(--hunter-green);
+  flex-direction: row;
+  row-gap: 1rem;
+}
+
+.nav-logo {
+  padding: 1.25rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  row-gap: 1rem;
+  column-gap: 1.25rem;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--sec-bg-colour);
+  text-decoration-line: none;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.nav-links a:hover {
+  filter: brightness(1.25);
 }
 
 /* Media queries for responsive design
@@ -86,42 +133,42 @@ body.main-content {
 
 /* Extra small */
 @media only screen and (max-width: 576px) {
-  body.main-content {
+  .main-content > main {
     min-width: 100%;
   }
 }
 
 /* Small */
 @media screen and (min-width: 576px) {
-  body.main-content {
+  .main-content > main {
     min-width: 80%;
   }
 }
 
 /* Medium */
 @media screen and (min-width: 768px) {
-  body.main-content {
+  .main-content > main {
     min-width: 75%;
   }
 }
 
 /* Large */
 @media screen and (min-width: 992px) {
-  body.main-content {
+  .main-content > main {
     min-width: 70%;
   }
 }
 
 /* Extra Large */
 @media screen and (min-width: 1200px) {
-  body.main-content {
+  .main-content > main {
     min-width: 70%;
   }
 }
 
 /* Extra extra large */
 @media screen and (min-width: 1400px) {
-  body.main-content {
+  .main-content > main {
     min-width: 70%;
   }
 }
