@@ -1,2 +1,2 @@
-FROM httpd:latest
-COPY ./my-httpd.conf /usr/local/apache2/conf/httpd.conf
+FROM php:7.4-apache
+RUN a2enmod rewrite

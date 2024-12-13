@@ -12,7 +12,7 @@ services:
     container_name: apache
     build: .
     volumes:
-      - ./app:/usr/local/apache2/htdocs/
+      - ./app:/var/www/html
     ports:
       - 8080:80
 volumes:
