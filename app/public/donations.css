@@ -1,0 +1,22 @@
+/*
+ * Animations for donation scrolling
+ * Stored separately as it involves keyframes
+ */
+
+.scroll-text {
+  text-align: right;
+  animation: scroll-animation 30s linear infinite;
+  animation-iteration-count: infinite;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes scroll-animation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -8,5 +8,6 @@
 
   </title>
   <link href="../public/main.css" rel="stylesheet"/>
-  <link href="../public/reset.css" rel="stylesheet">
+  <link href="../public/reset.css" rel="stylesheet"/>
+  <link href="../public/donations.css" rel="stylesheet"/>
 </head>

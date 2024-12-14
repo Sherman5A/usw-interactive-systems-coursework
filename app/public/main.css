@@ -92,16 +92,30 @@ body > footer {
   justify-content: center;
 }
 
-/*Header layout */
-.nav-bar {
-  display: flex;
+.main-content > main {
+  margin: 2rem 0;
+}
+
+/* Header layout */
+header.top-header {
   background-color: var(--hunter-green);
+}
+
+.header-content-wrapper {
+  display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   row-gap: 1rem;
 }
 
-.nav-logo {
-  padding: 1.25rem;
+.header-logo {
+  padding: 1.25rem 1.25rem 1.25rem 0;
 }
 
 .nav-links {
@@ -111,7 +125,6 @@ body > footer {
   row-gap: 1rem;
   column-gap: 1.25rem;
   flex-wrap: wrap;
-  align-content: center;
   padding: 0;
 }
 
@@ -120,11 +133,34 @@ body > footer {
   text-decoration-line: none;
   padding: 0.5rem;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
 }
 
 .nav-links a:hover {
   filter: brightness(1.25);
+}
+
+.donation-alerts {
+  overflow: hidden;
+  background-color: var(--sage);
+  padding: 0.3rem 0;
+}
+
+.donation-alerts * {
+  color: var(--focus);
+}
+
+/* Footer layout */
+footer.footer-wrapper {
+  background-color: var(--hunter-green);
+}
+
+div.footer-content {
+
+}
+
+div.footer-content * {
+  color: var(--sec-bg-colour);
 }
 
 /* Media queries for responsive design
@@ -133,42 +169,42 @@ body > footer {
 
 /* Extra small */
 @media only screen and (max-width: 576px) {
-  .main-content > main {
+  .main-content > main, .header-content {
     min-width: 100%;
   }
 }
 
 /* Small */
 @media screen and (min-width: 576px) {
-  .main-content > main {
+  .main-content > main, .header-content {
     min-width: 80%;
   }
 }
 
 /* Medium */
 @media screen and (min-width: 768px) {
-  .main-content > main {
+  .main-content > main, .header-content {
     min-width: 75%;
   }
 }
 
 /* Large */
 @media screen and (min-width: 992px) {
-  .main-content > main {
+  .main-content > main, .header-content {
     min-width: 70%;
   }
 }
 
 /* Extra Large */
 @media screen and (min-width: 1200px) {
-  .main-content > main {
+  .main-content > main, .header-content {
     min-width: 70%;
   }
 }
 
 /* Extra extra large */
 @media screen and (min-width: 1400px) {
-  .main-content > main {
+  .main-content > main, .header-content {
     min-width: 70%;
   }
 }
