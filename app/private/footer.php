@@ -1,5 +1,54 @@
 <footer class="footer-wrapper">
   <div class="footer-content">
-    <p>Footer</p>
+    <div class="footer-content-logo">
+      <a href="/">
+        <img src="../public/img/logo.svg" alt="Logo - image of cat" width="75"/>
+      </a>
+    </div>
+    <ul class="nav-links footer-content-links">
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="./pets">Pets</a>
+      </li>
+      <li>
+        <a href="./donate">Donate</a>
+      </li>
+      <li>
+        <a href="./directions">Directions</a>
+      </li>
+      <li>
+        <a href="./contact-us">Contact us</a>
+      </li>
+    </ul>
+    <ul class="nav-links">
+      <li>
+        <a href="https://youtube.com" class="social-media-link">
+          <img src="../public/img/youtube.svg" alt="YouTube logo - Link to __'s YouTube channel" width="22">
+          YouTube
+        </a>
+      </li>
+      <li>
+        <a href="https://facebook.com" class="social-media-link">
+          <img src="../public/img/facebook.svg" alt="Facebook logo - Link to __'s Facebook account" width="22">
+          Facebook
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com" class="social-media-link">
+          <img src="../public/img/x.svg" alt="X logo - Link to __'s X account" width="22">
+          X
+        </a>
+      </li>
+      <li>
+        <a href="https://instagram.com" class="social-media-link">
+          <span>
+            <img src="../public/img/instagram.svg" alt="Instagram logo - Link to __'s Instagram account" width="22">
+          </span>
+          Instagram
+        </a>
+      </li>
+    </ul>
   </div>
 </footer>

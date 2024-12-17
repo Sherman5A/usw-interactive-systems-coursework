@@ -124,7 +124,7 @@ header.top-header {
   padding: 0;
 }
 
-.nav-links a {
+.header-links a {
   color: var(--sec-bg-colour);
   text-decoration-line: none;
   padding: 0.5rem;
@@ -132,7 +132,7 @@ header.top-header {
   font-size: 1.3rem;
 }
 
-.nav-links a:hover {
+.header-links a:hover {
   filter: brightness(1.25);
 }
 
@@ -158,12 +158,24 @@ footer.footer-wrapper {
 
 .footer-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  margin: 1.5rem 0;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.footer-content *:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 div.footer-content * {
   color: var(--sec-bg-colour);
+}
+
+.social-media-link {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
 }
 
 /* Media queries for responsive design

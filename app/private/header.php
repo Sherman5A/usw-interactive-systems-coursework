@@ -7,7 +7,7 @@
         </a>
       </div>
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links header-links">
           <li>
             <a href="/">Home</a>
           </li>
