@@ -85,6 +85,12 @@ textarea, select {
   font-size: inherit;
 }
 
+/* Remove fieldset border */
+fieldset {
+  border-width: 0;
+  padding: 0;
+}
+
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
   min-height: 10em;

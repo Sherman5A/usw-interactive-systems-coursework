@@ -1,10 +1,5 @@
 <?php
-  //  $title = "Home";
-  //echo '<p>test</p>';
-  //  Take target URI
-  //  echo $_GET('rt');
   $request = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
-  //        echo $request;
   // Routing
   switch ($request) {
     case "":
@@ -20,19 +15,17 @@
     case "/contact-us":
       $view = __DIR__ . "/views/contact-us.php";
       break;
+    case "/about-us":
+      $view = __DIR__ . "/views/about-us.php";
+      break;
+    case "/directions":
+      $view = __DIR__ . "/views/directions.php";
+      break;
     default:
       http_response_code(404);
       $view = __DIR__ . "/views/404.php";
       break;
   }
-  //  function setPageTitle($newTitle)
-  //  {
-  //    global $title;
-  //    str_replace('<title></title>', '<title>' . $title . '</title>');
-  //  }
-
-  //  echo "<p>Title $title</p>";
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

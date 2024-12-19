@@ -26,8 +26,13 @@ input {
 button {
   background-color: var(--sec-bg-colour);
   border: 2px solid var(--grey);
-  padding: 0.4rem 0.6rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 5px;
+}
+
+button[type=submit] {
+  color: black;
+  background-color: var(--sage);
 }
 
 button:hover, input:hover {
@@ -47,7 +52,6 @@ input[type=radio] {
 input[type=radio]:focus-visible {
   outline: 3px solid black;
   box-shadow: none;
-
 }
 
 button:active {
@@ -69,6 +73,11 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 
+form {
+  background-color: var(--sec-bg-colour);
+  padding: 1.5rem 1.5rem;
+}
+
 /* Layout */
 html, body {
   height: 100%;
@@ -82,8 +91,8 @@ body {
 }
 
 .main-content {
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: center;
 }
@@ -105,7 +114,7 @@ header.top-header {
 
 .header-content {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   row-gap: 1rem;
 }
@@ -115,12 +124,11 @@ header.top-header {
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   row-gap: 1rem;
   column-gap: 1.25rem;
-  flex-wrap: wrap;
+  list-style: none;
   padding: 0;
 }
 
@@ -136,6 +144,7 @@ header.top-header {
   filter: brightness(1.25);
 }
 
+/* Donation alerts */
 .donation-alerts {
   overflow: hidden;
   background-color: var(--sage);
@@ -146,30 +155,47 @@ header.top-header {
   color: var(--focus);
 }
 
+.donation-form label, .donation-form input[type=text] {
+  display: block;
+}
+
+.donation-form > *, .donation-form fieldset > * {
+  margin: 0.5rem 0;
+}
+
 /* Footer layout */
-footer.footer-wrapper {
-  border-top: 3px solid var(--sage);
-  background-color: var(--hunter-green);
+.footer-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  min-height: 6rem;
+  border-top: 3px solid var(--sage);
+  background-color: var(--hunter-green);
 }
 
 .footer-content {
   display: flex;
   flex-direction: row;
+  column-gap: 1rem;
   margin: 1.5rem 0;
-  column-gap: 2rem;
-  align-items: center;
-}
-
-.footer-content *:not(:last-child) {
-  margin-bottom: 0.5rem;
 }
 
 div.footer-content * {
   color: var(--sec-bg-colour);
+}
+
+.footer-content-logo {
+  flex: 0 0 64px;
+}
+
+.footer-content-links > *:not(:last-child) {
+  margin-right: auto;
+}
+
+.footer-content-links {
+  display: flex;
+  flex: 2 1 auto;
+  flex-flow: row wrap;
+  row-gap: 1.25rem
 }
 
 .social-media-link {
@@ -178,7 +204,8 @@ div.footer-content * {
   column-gap: 0.4rem;
 }
 
-/* Media queries for responsive design
+/*
+ * Media queries for responsive design
  * Using the default bootstrap endpoint sizes as these are most common
  */
 
