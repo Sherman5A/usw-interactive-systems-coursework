@@ -7,7 +7,7 @@
   <div class="main-content">
     <main>
       <h1>Donate</h1>
-      <form class="donation-form">
+      <form action="./donation/confirm" method="post" class="donation-form">
         <h2>Donation form</h2>
         <fieldset>
           <legend>Details:</legend>
@@ -25,8 +25,7 @@
           </label>
           <label for="donator-message">
             Donation message:
-            <textarea id="donator-message">
-            </textarea>
+            <textarea id="donator-message"></textarea>
           </label>
         </fieldset>
         <fieldset>

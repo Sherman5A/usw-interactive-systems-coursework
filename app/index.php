@@ -24,6 +24,9 @@
     case "/news":
       $view = __DIR__ . "/views/news.php";
       break;
+    case "/donation/confirm":
+      $view = __DIR__ . "/views/donate-confirm.php";
+      break;
     default:
       http_response_code(404);
       $view = __DIR__ . "/views/404.php";
