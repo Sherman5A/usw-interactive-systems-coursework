@@ -20,6 +20,12 @@
           <li>
             <a href="./contact-us">Contact us</a>
           </li>
+          <li>
+            <a href="./about-us">About us</a>
+          </li>
+          <li>
+            <a href="./news">News</a>
+          </li>
         </ul>
       </nav>
     </div>

@@ -17,6 +17,9 @@
           <a href="./donate">Donate</a>
         </li>
         <li>
+          <a href="./news">News</a>
+        </li>
+        <li>
           <a href="./about-us">About us</a>
         </li>
         <li>
@@ -30,25 +33,25 @@
       <!--    </div>-->
       <ul class="nav-links">
         <li>
-          <a href="https://youtube.com" class="social-media-link">
+          <a href="https://www.youtube.com/channel/UC7DW3cdAYBTn5I6Swh_RZYw" class="social-media-link">
             <img src="../public/img/youtube.svg" alt="YouTube logo - Link to __'s YouTube channel" width="22">
             YouTube
           </a>
         </li>
         <li>
-          <a href="https://facebook.com" class="social-media-link">
+          <a href="https://www.facebook.com/UniversityOfSouthWales" class="social-media-link">
             <img src="../public/img/facebook.svg" alt="Facebook logo - Link to __'s Facebook account" width="22">
             Facebook
           </a>
         </li>
         <li>
-          <a href="https://x.com" class="social-media-link">
+          <a href="https://x.com/UniSouthWales" class="social-media-link">
             <img src="../public/img/x.svg" alt="X logo - Link to __'s X account" width="22">
             X
           </a>
         </li>
         <li>
-          <a href="https://instagram.com" class="social-media-link">
+          <a href="https://www.instagram.com/unisouthwales/" class="social-media-link">
           <span>
             <img src="../public/img/instagram.svg" alt="Instagram logo - Link to __'s Instagram account" width="22">
           </span>

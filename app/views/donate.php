@@ -9,25 +9,33 @@
       <h1>Donate</h1>
       <form class="donation-form">
         <h2>Donation form</h2>
-        <p>Details:</p>
         <fieldset>
-          <label>
-            Name
-            <input type="text">
+          <legend>Details:</legend>
+          <label for="donator-name">
+            Name:
+            <input type="text" id="donator-name" name="donator-name">
           </label>
-          <label>
-            Amount
-            <input type="text">
+          <label for="donator-email">
+            Email:
+            <input type="email" id="donator-email" name="donator-email">
           </label>
-          <label>
-            Message
-            <input type="text">
+          <label for="donator-amount">
+            Amount: (£)
+            <input type="number" min="1" step="0.01" value="5" required id="donator-amount" name="donator-amount">
+          </label>
+          <label for="donator-message">
+            Donation message:
+            <textarea id="donator-message">
+            </textarea>
           </label>
         </fieldset>
-        <p>Communication preferences:</p>
         <fieldset>
-          <label>
-            <input type="checkbox">
+          <legend>
+            (Optional)
+            Communication preferences:
+          </legend>
+          <label for="comm-newsletter">
+            <input type="checkbox" id="comm-newsletter" name="comm-preference">
             Newsletter
           </label>
           <label>
