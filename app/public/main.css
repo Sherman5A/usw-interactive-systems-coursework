@@ -173,6 +173,14 @@ header.top-header {
   margin: 0.5rem 0;
 }
 
+.donation-form input, .donation-form textarea {
+  margin: 0.25rem 0;
+}
+
+.donation-type {
+  font-weight: normal;
+}
+
 /* Footer layout */
 .footer-wrapper {
   display: flex;

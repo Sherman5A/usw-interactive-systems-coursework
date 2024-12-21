@@ -19,34 +19,44 @@
             Email:
             <input type="email" id="donator-email" name="donator-email">
           </label>
+          <fieldset>
+            <legend class="donation-type">Donation type:</legend>
+            <label for="donation-type-one-time">
+              <input type="radio" id="donation-type-one-time" name="donation-type">
+              One time
+            </label>
+            <label for="donation-type-monthly">
+              <input type="radio" id="donation-type-monthly" name="donation-type">
+              Monthly
+            </label>
+          </fieldset>
           <label for="donator-amount">
             Amount: (£)
             <input type="number" min="1" step="0.01" value="5" required id="donator-amount" name="donator-amount">
           </label>
           <label for="donator-message">
             Donation message:
-            <textarea id="donator-message"></textarea>
+            <textarea id="donator-message" rows="4" cols="50"></textarea>
           </label>
-        </fieldset>
-        <fieldset>
-          <legend>
-            (Optional)
-            Communication preferences:
-          </legend>
-          <label for="comm-newsletter">
-            <input type="checkbox" id="comm-newsletter" name="comm-preference">
-            Newsletter
-          </label>
-          <label>
-            <input type="checkbox">
-            Email
-          </label>
-          <label>
-            <input type="checkbox">
-            Phone
-          </label>
-        </fieldset>
-        <button type="submit">Submit donation</button>
+          <fieldset>
+            <legend>
+              (Optional)
+              Communication preferences:
+            </legend>
+            <label for="comm-newsletter">
+              <input type="checkbox" id="comm-newsletter" name="comm-preference">
+              Newsletter
+            </label>
+            <label>
+              <input type="checkbox">
+              Email
+            </label>
+            <label>
+              <input type="checkbox">
+              Phone
+            </label>
+          </fieldset>
+          <button type="submit">Submit donation</button>
       </form>
     </main>
   </div>
