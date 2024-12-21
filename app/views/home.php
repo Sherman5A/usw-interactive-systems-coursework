@@ -1,7 +1,11 @@
 <?php
+  require_once __DIR__ . "/../data/database.php";
+
   // Setup database connection
+  use data\database;
+
   require __DIR__ . "/../config/config.php";
-  $db = new \data\database(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+  $db = new database(DB_HOST, DB_NAME, DB_PORT, DB_USER, DB_PASS, DB_SOCK);
   // Title
   $title = "Home";
   include __DIR__ . "/../private/head.php";

@@ -3,33 +3,44 @@
 
   namespace data;
 
-  use PDO;
+  use mysqli;
 
   class database
   {
-    private ?PDO $conn;
+    private mysqli $conn;
     private string $host;
-    private string $name;
+    private int $port;
+    private string $databaseName;
     private string $user;
     private string $password;
+    private string $sock;
 
-    public function __construct(string $host, string $name, string $user, string $password)
+    public function __construct(string $host, string $name, int $port, string $user, string $password, string $sock)
     {
       $this->host = $host;
-      $this->name = $name;
+      $this->databaseName = $name;
+      $this->port = $port;
       $this->user = $user;
       $this->password = $password;
+      $this->sock = $sock;
     }
 
-    public function getConn(): ?PDO
+    public function getConn(): mysqli
     {
       if (isset($this->conn)) {
         return $this->conn;
       }
-      $dns = "mysql:host={$this->host};dbname={$this->name}";
-      $this->conn = new PDO($dns, $this->user, $this->password);
-      // Set exception on error
-      $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      echo $this->host;
+      echo $this->databaseName;
+      echo $this->port;
+      echo $this->user;
+      echo $this->password;
+
+      $this->conn = new mysqli($this->host, $this->user, $this->password, $this->databaseName, $this->port, $this->sock);
+      if ($this->conn->connect_error) {
+        exit("Failed to connect to mysql database {$this->conn->connect_error}");
+      }
+      $this->conn->set_charset("utf8mb4");
       return $this->conn;
     }
   }
