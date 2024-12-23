@@ -86,6 +86,38 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 
+table {
+  text-align: left;
+  vertical-align: top;
+  border: 2px solid var(--focus);
+  border-collapse: collapse;
+}
+
+table caption {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+thead {
+  background-color: var(--sage);
+}
+
+tbody {
+  background-color: var(--sec-bg-colour);
+}
+
+th, td {
+  padding: 0.5rem;
+  font-weight: 400;
+  border: 2px solid var(--focus);
+}
+
+th[scope=row] {
+  font-weight: 700;
+}
+
 /*
  * Layout
  */
@@ -109,6 +141,7 @@ body {
 
 .main-content > main {
   margin: 2rem 0;
+  /*flex: 1 0;*/
 }
 
 /* Header layout */
@@ -177,6 +210,11 @@ header.top-header {
   margin: 0.25rem 0;
 }
 
+form.hidden-form {
+  background-color: transparent;
+  padding: 0;
+}
+
 .donation-type {
   font-weight: normal;
 }
@@ -230,41 +268,41 @@ div.footer-content * {
 /* Extra small */
 @media only screen and (max-width: 576px) {
   .main-content > main, .header-content, .footer-content {
-    min-width: 100%;
+    width: 100%;
   }
 }
 
 /* Small */
 @media screen and (min-width: 576px) {
   .main-content > main, .header-content, .footer-content {
-    min-width: 80%;
+    width: 80%;
   }
 }
 
 /* Medium */
 @media screen and (min-width: 768px) {
   .main-content > main, .header-content, .footer-content {
-    min-width: 75%;
+    width: 75%;
   }
 }
 
 /* Large */
 @media screen and (min-width: 992px) {
   .main-content > main, .header-content, .footer-content {
-    min-width: 70%;
+    width: 70%;
   }
 }
 
 /* Extra Large */
 @media screen and (min-width: 1200px) {
   .main-content > main, .header-content, .footer-content {
-    min-width: 65%;
+    width: 65%;
   }
 }
 
 /* Extra extra large */
 @media screen and (min-width: 1400px) {
   .main-content > main, .header-content, .footer-content {
-    min-width: 60%;
+    width: 60%;
   }
 }

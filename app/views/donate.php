@@ -22,21 +22,21 @@
           <fieldset>
             <legend class="donation-type">Donation type:</legend>
             <label for="donation-type-one-time">
-              <input type="radio" id="donation-type-one-time" name="donation-type">
+              <input type="radio" id="donation-type-one-time" name="donation-type" value="one-time">
               One time
             </label>
             <label for="donation-type-monthly">
-              <input type="radio" id="donation-type-monthly" name="donation-type">
+              <input type="radio" id="donation-type-monthly" name="donation-type" value="monthly">
               Monthly
             </label>
           </fieldset>
-          <label for="donator-amount">
+          <label for="donation-amount">
             Amount: (£)
-            <input type="number" min="1" step="0.01" value="5" required id="donator-amount" name="donator-amount">
+            <input type="number" min="1" step="0.01" value="5" required id="donation-amount" name="donation-amount">
           </label>
           <label for="donator-message">
             Donation message:
-            <textarea id="donator-message" rows="4" cols="50"></textarea>
+            <textarea id="donator-message" name="donation-message" rows="4" cols="50"></textarea>
           </label>
           <fieldset>
             <legend>
@@ -44,15 +44,15 @@
               Communication preferences:
             </legend>
             <label for="comm-newsletter">
-              <input type="checkbox" id="comm-newsletter" name="comm-preference">
+              <input type="checkbox" id="comm-newsletter" name="comm-preference" value="newsletter">
               Newsletter
             </label>
-            <label>
-              <input type="checkbox">
+            <label for="comm-email">
+              <input type="checkbox" id="comm-email" name="comm-preference" value="email">
               Email
             </label>
-            <label>
-              <input type="checkbox">
+            <label for="comm-phone">
+              <input type="checkbox" id="comm-phone" name="comm-preference" value="phone">
               Phone
             </label>
           </fieldset>

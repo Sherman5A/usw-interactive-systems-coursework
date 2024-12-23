@@ -1,6 +1,12 @@
 <?php
+
+  use data\database;
+
   require_once __DIR__ . "/data/database.php";
+  require_once __DIR__ . "/config/config.php";
+  session_start();
   $request = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+  $db = new database(DB_HOST, DB_NAME, DB_PORT, DB_USER, DB_PASS, DB_SOCK);
   // Routing
   switch ($request) {
     case "":
@@ -27,6 +33,9 @@
       break;
     case "/donation/confirm":
       $view = __DIR__ . "/views/donate-confirm.php";
+      break;
+    case "/donation/submitted":
+      $view = __DIR__ . "/views/donate-submitted.php";
       break;
     default:
       http_response_code(404);

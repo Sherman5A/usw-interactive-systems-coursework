@@ -30,7 +30,8 @@
                donator_name, 
                donation_email, 
                donation_amount, 
-               donation_message 
+               donation_message,
+               comm_preference
         FROM public.donation LIMIT 20"
       );
       $rows = $result->fetch_all(MYSQLI_ASSOC);
@@ -43,7 +44,8 @@
           $row["donator_name"],
           $row["donation_email"],
           floatval($row["donation_amount"]),
-          $row["donation_message"]
+          $row["donation_message"],
+          $row["comm_preference"]
         );
         $donations[] = $new_donation;
       }
@@ -61,15 +63,16 @@
 
       $sql = $conn->prepare("
         INSERT INTO public.donation
-            (donation_type_id, donator_name, donation_email, donation_amount, donation_message)
-        VALUES (?, ?, ?, ?, ?);"
+            (donation_type_id, donator_name, donation_email, donation_amount, donation_message, comm_preference)
+        VALUES (?, ?, ?, ?, ?, ?);"
       );
-      $sql->bind_param("issds",
+      $sql->bind_param("issdss",
         $donation_type_id,
         $donation->donationName,
         $donation->donationEmail,
         $donation->donationAmount,
-        $donation->donationMessage
+        $donation->donationMessage,
+        $donation->commPreference
       );
 
       return $sql->execute();
