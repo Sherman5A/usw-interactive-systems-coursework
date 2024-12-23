@@ -31,7 +31,7 @@
                donation_email, 
                donation_amount, 
                donation_message 
-        from public.donation limit 20"
+        FROM public.donation LIMIT 20"
       );
       $rows = $result->fetch_all(MYSQLI_ASSOC);
       /** @var array<donation> $donations */
