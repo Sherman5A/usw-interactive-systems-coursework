@@ -30,11 +30,6 @@
       if (isset($this->conn)) {
         return $this->conn;
       }
-      echo $this->host;
-      echo $this->databaseName;
-      echo $this->port;
-      echo $this->user;
-      echo $this->password;
 
       $this->conn = new mysqli($this->host, $this->user, $this->password, $this->databaseName, $this->port, $this->sock);
       if ($this->conn->connect_error) {

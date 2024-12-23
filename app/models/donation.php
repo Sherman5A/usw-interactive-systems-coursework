@@ -11,7 +11,8 @@
     public float $donationAmount;
     public string $donationMessage;
 
-    public function __construct($donationId, $donationType, $donationName, $donationEmail, $donationAmount, $donationMessage)
+    public function __construct(int   $donationId, string $donationType, string $donationName, string $donationEmail,
+                                float $donationAmount, string $donationMessage)
     {
       $this->donationId = $donationId;
       $this->donationType = $donationType;

@@ -8,9 +8,18 @@
   animation: scroll-animation 30s linear infinite;
   animation-iteration-count: infinite;
   text-overflow: clip;
-  overflow: hidden;
+  overflow: visible;
   white-space: nowrap;
 }
+
+.scroll-text-donation:nth-child(odd) {
+  margin-right: 3rem;
+}
+
+.scroll-text-donation:nth-child(even) {
+  margin-right: 8rem;
+}
+
 
 @keyframes scroll-animation {
   from {

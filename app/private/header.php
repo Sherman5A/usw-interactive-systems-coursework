@@ -1,3 +1,16 @@
+<?php
+  /**
+   * Included from index.php
+   * @var database $db
+   */
+  require_once __DIR__ . "/../data/donation_repo.php";
+
+  use data\database;
+  use data\donation_repo;
+
+  $donation_repo = new donation_repo($db);
+  $donations = $donation_repo->get_donations();
+?>
 <header class="top-header">
   <div class="header-content-wrapper">
     <div class="header-content">
@@ -31,13 +44,14 @@
     </div>
   </div>
   <div class="donation-alerts">
-    <p class="scroll-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nisl lacus. Mauris
-      convallis eros at fermentum dapibus. Nunc imperdiet bibendum lorem, at bibendum orci mollis in. Curabitur varius
-      sem non semper porttitor. Cras condimentum felis vitae elit tempor, et congue libero feugiat. Integer id metus eu
-      sem dictum varius. Pellentesque non ipsum vel risus convallis euismod id vel arcu. Nunc malesuada id tortor id
-      condimentum. Proin suscipit in quam et malesuada. Aliquam condimentum nec elit et scelerisque. Cras porta tempor
-      magna, et lacinia tortor imperdiet at. Aenean elit diam, tristique eu iaculis a, auctor at ante. Orci varius
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus fringilla urna ut urna congue
-      rutrum. Nullam vitae bibendum tortor. Sed egestas eu ex eu blandit. </p>
+    <p class="scroll-text">
+      <?php
+        foreach ($donations as $donation) {
+          $donationText = htmlspecialchars("{$donation->donationName} donated £{$donation->donationAmount} saying '$donation->donationMessage'");
+          echo "<span class='scroll-text-donation'> $donationText</span>";
+        }
+      ?>
+    </p>
+
   </div>
 </header>
