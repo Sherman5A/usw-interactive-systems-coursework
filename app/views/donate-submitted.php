@@ -3,32 +3,19 @@
    * Included from index.php
    * @var database $db
    */
-  require_once __DIR__ . "/../data/donation_repo.php";
+  require_once __DIR__ . "/../controllers/donation_controller.php";
 
+  use controllers\donation_controller;
   use data\database;
-  use data\donation_repo;
-  use model\donation;
 
+  $donation_controller = new donation_controller($db);
   $missing_vars = false;
-  if (!isset($_SESSION["donation-type"], $_SESSION["donator-name"], $_SESSION["donator-email"],
-    $_SESSION["donation-amount"], $_SESSION["donation-message"], $_SESSION["comm-preference"]
-  )) {
+  try {
+    $result = $donation_controller->submit_donation();
+    // Clear session to prevent resubmitting
+  } catch (Exception $e) {
+    $title = $e->getMessage();
     $missing_vars = true;
-    $title = "Form data incomplete";
-  } else {
-    $donation_repo = new donation_repo($db);
-    $new_donation = new donation(
-      null,
-      $_SESSION["donation-type"],
-      $_SESSION["donator-name"],
-      $_SESSION["donator-email"],
-      floatval(["donation-amount"]),
-      $_SESSION["donation-message"],
-      $_SESSION["comm-preference"]
-    );
-    $db_result = $donation_repo->add_donation($new_donation);
-    $title = $db_result ? "Donation submitted" : "Error submitting donation";
-    session_unset();
   }
   include __DIR__ . "/../private/head.php";
 ?>
@@ -38,7 +25,7 @@
     <main>
       <h1>
         <?php
-          if ($db_result) {
+          if ($result) {
             echo "Donation submitted";
           } else {
             echo "Error submitting donation";
@@ -47,10 +34,11 @@
       </h1>
       <p>
         <?php
-          if ($db_result) {
+          if ($result) {
             echo "Donation successfully submitted to company name";
           } else if ($missing_vars) {
-            echo "Form data incomplete";
+            echo "<p>Form data incomplete</p>";
+            echo "<p>Resubmit form <a href='/donate'> here</a>";
           } else {
             echo "Error submitting to company name";
           }
@@ -118,7 +106,10 @@
             </tr>
           </tbody>
         </table>
-      <?php } ?>
+        <?php
+      }
+        session_unset();
+      ?>
     </main>
   </div>
 </body>
