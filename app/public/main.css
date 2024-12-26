@@ -219,6 +219,47 @@ form.hidden-form {
   font-weight: normal;
 }
 
+ul.list-pets {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  row-gap: 2rem;
+  /*column-gap: 2rem;*/
+  list-style: none;
+  padding: 0;
+}
+
+ul.list-pets li {
+  max-width: calc(50% - 2rem);
+  /*margin: 1rem;*/
+  padding: 1rem;
+  border: var(--focus) 2px solid;
+}
+
+ul.list-pets li > * {
+  margin: 0.25rem 0;
+}
+
+.pet-title-image {
+  display: flex;
+  flex-flow: nowrap column-reverse;
+  row-gap: 0.5rem;
+}
+
+.pet-details {
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+
+  tbody {
+    background-color: transparent;
+  }
+
+  th, td {
+    width: 50%;
+  }
+}
+
 /* Footer layout */
 .footer-wrapper {
   display: flex;
@@ -268,7 +309,11 @@ div.footer-content * {
 /* Extra small */
 @media only screen and (max-width: 576px) {
   .main-content > main, .header-content, .footer-content {
-    width: 100%;
+    width: 90%;
+  }
+
+  ul.list-pets li {
+    max-width: 100%;
   }
 }
 
