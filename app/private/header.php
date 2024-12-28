@@ -16,7 +16,8 @@
     <div class="header-content">
       <div class="header-logo">
         <a href="/">
-          <img src="../public/img/logo.svg" alt="Logo - image of cat" width="100"/>
+          <img src="../public/img/logo-text.svg" alt="Preloved pets logo" width="225"/>
+          <span class="hidden-text">Preloved Pets</span>
         </a>
       </div>
       <nav>

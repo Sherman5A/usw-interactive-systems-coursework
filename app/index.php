@@ -37,6 +37,12 @@
     case "/donation/submitted":
       $view = __DIR__ . "/views/donate-submitted.php";
       break;
+    case "/supporters/login":
+      $view = __DIR__ . "/views/supporters-signin.php";
+      break;
+    case "/supporters/home":
+      $view = __DIR__ . "/views/supporters-home.php";
+      break;
     default:
       http_response_code(404);
       $view = __DIR__ . "/views/404.php";

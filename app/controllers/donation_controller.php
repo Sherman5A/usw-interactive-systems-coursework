@@ -45,4 +45,9 @@
       );
       return $this->donation_repo->add_donation($new_donation);
     }
+
+    function is_supporters_member(string $email): bool
+    {
+      return $this->donation_repo->in_supporters_club($email);
+    }
   }

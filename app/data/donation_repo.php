@@ -77,4 +77,21 @@
 
       return $sql->execute();
     }
+
+    public function in_supporters_club(string $email): bool
+    {
+      $conn = $this->database->getConn();
+      $sql = $conn->prepare("
+        SELECT 1 AS 'present' FROM public.donation WHERE donation_email = ? AND donation_type_id = 1"
+      );
+      $sql->bind_param("s", $email);
+      $sql->execute();
+
+      $result = $sql->get_result();
+      $rows = $result->fetch_all(MYSQLI_ASSOC);
+      if (isset($rows[0])) {
+        return boolval($rows[0]["present"]);
+      }
+      return false;
+    }
   }
