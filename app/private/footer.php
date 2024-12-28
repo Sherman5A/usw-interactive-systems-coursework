@@ -11,22 +11,22 @@
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="./pets">Pets</a>
+          <a href="/pets">Pets</a>
         </li>
         <li>
-          <a href="./donate">Donate</a>
+          <a href="/donate">Donate</a>
         </li>
         <li>
-          <a href="./news">News</a>
+          <a href="/news">News</a>
         </li>
         <li>
-          <a href="./about-us">About us</a>
+          <a href="/about-us">About us</a>
         </li>
         <li>
-          <a href="./directions">Directions</a>
+          <a href="/directions">Directions</a>
         </li>
         <li>
-          <a href="./contact-us">Contact us</a>
+          <a href="/contact-us">Contact us</a>
         </li>
       </ul>
       <!--    <div class="footer-content-spacer">-->
