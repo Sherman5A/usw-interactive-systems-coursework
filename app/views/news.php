@@ -1,5 +1,5 @@
 <?php
-  $title = "Home";
+  $title = "Preloved Pets - News";
   include __DIR__ . "/../private/head.php";
 ?>
 <body>

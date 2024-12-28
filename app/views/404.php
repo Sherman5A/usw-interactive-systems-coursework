@@ -1,5 +1,5 @@
 <?php
-  $title = "404";
+  $title = "Preloved Pets- 404";
   include __DIR__ . "/../private/head.php";
 ?>
 <body>

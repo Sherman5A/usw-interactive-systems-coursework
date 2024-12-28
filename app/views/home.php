@@ -7,7 +7,7 @@
   use data\database;
 
   // Title
-  $title = "Home";
+  $title = "Preloved Pets - Home";
   include __DIR__ . "/../private/head.php";
 ?>
 <body>

@@ -1,5 +1,5 @@
 <?php
-  $title = "Confirm Donation";
+  $title = "Preloved Pets - Confirm Donation";
   include __DIR__ . "/../private/head.php";
   //  Put post into session to submit on form submit
   if (isset($_POST)) {

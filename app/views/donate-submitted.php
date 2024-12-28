@@ -35,12 +35,12 @@
       <p>
         <?php
           if ($result) {
-            echo "Donation successfully submitted to company name";
+            echo "Donation successfully submitted to Preloved Pets";
           } else if ($missing_vars) {
             echo "<p>Form data incomplete</p>";
             echo "<p>Resubmit form <a href='/donate'> here</a>";
           } else {
-            echo "Error submitting to company name";
+            echo "Error submitting to Preloved Pets";
           }
         ?>
       </p>

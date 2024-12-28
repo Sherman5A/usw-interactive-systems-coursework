@@ -10,7 +10,7 @@
 
   $pet_repo = new pet_repo($db);
   $pets = $pet_repo->get_pets();
-  $title = "Pets";
+  $title = "Preloved Pets - Pets";
   include __DIR__ . "/../private/head.php";
 ?>
 <body>
