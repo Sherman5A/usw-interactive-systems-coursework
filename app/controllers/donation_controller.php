@@ -55,4 +55,9 @@
       }
       return $in_supporters_club;
     }
+
+    function update_donation(int $donation_id, string $donation_name, string $donation_email, string $comm_preference): bool
+    {
+      return $this->donation_repo->update_donation($donation_id, $donation_name, $donation_email, $comm_preference);
+    }
   }

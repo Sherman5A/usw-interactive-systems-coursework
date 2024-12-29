@@ -235,6 +235,7 @@ header.top-header {
 form.hidden-form {
   background-color: transparent;
   padding: 0;
+  margin: 1rem 0;
 }
 
 .donation-type {

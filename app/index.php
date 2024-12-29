@@ -4,6 +4,10 @@
 
   require_once __DIR__ . "/data/database.php";
   require_once __DIR__ . "/config/config.php";
+  //  Require classes for session_start to avoid __PHP_Incomplete_Class
+  require_once __DIR__ . "/models/pet.php";
+  require_once __DIR__ . "/models/donation.php";
+
   session_start();
   $request = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
   $db = new database(DB_HOST, DB_NAME, DB_PORT, DB_USER, DB_PASS, DB_SOCK);
@@ -42,6 +46,12 @@
       break;
     case "/supporters/home":
       $view = __DIR__ . "/views/supporters-home.php";
+      break;
+    case "/supporters/update":
+      $view = __DIR__ . "/views/supporters-update-details.php";
+      break;
+    case "/supporters/update-submit":
+      $view = __DIR__ . "/views/supporters-update-details-submitted.php";
       break;
     case "/supporters/signout":
       // Unset authentication

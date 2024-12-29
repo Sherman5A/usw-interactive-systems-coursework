@@ -73,10 +73,10 @@
         </tbody>
       </table>
       <?php
-        foreach ($_POST as $key => $value) {
-          echo "$key = $value";
-          echo "<br>";
-        }
+        //        foreach ($_POST as $key => $value) {
+        //          echo "$key = $value";
+        //          echo "<br>";
+        //        }
       ?>
       <form class="hidden-form" action="./submitted" method="post">
         <button type="submit">Submit donation</button>

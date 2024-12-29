@@ -38,7 +38,7 @@
         </li>
         <li class="right-nav-links">
           <a href="/news">News</a>
-        </li
+        </li>
         <li>
           <?php
             if (is_null($_SESSION["supporter_details"])) {

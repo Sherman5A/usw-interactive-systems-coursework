@@ -7,7 +7,7 @@
   <div class="main-content">
     <main>
       <h1>Donate</h1>
-      <form action="./donation/confirm" method="post" class="donation-form">
+      <form action="/donation/confirm" method="post" class="donation-form">
         <h2>Donation form</h2>
         <fieldset>
           <legend>Details:</legend>
@@ -57,7 +57,8 @@
               Phone
             </label>
           </fieldset>
-          <button type="submit">Submit donation</button>
+        </fieldset>
+        <button type="submit">Submit donation</button>
       </form>
     </main>
   </div>

@@ -29,8 +29,6 @@
           <a href="/contact-us">Contact us</a>
         </li>
       </ul>
-      <!--    <div class="footer-content-spacer">-->
-      <!--    </div>-->
       <ul class="nav-links">
         <li>
           <a href="https://www.youtube.com/channel/UC7DW3cdAYBTn5I6Swh_RZYw" class="social-media-link">

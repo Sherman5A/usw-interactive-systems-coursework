@@ -7,13 +7,21 @@
 
   use controllers\donation_controller;
   use data\database;
+  use model\donation;
 
   $donation_controller = new donation_controller($db);
-  $missing_vars = false;
-  $supporter_details = $donation_controller->is_supporters_member($_POST["email"]);
+
+  if (isset($_POST["email"])) {
+    $missing_vars = false;
+    $email = $_POST["email"];
+    $supporter_details = $donation_controller->is_supporters_member($email);
+  } else {
+    /** @var donation $donator_details */
+    $supporter_details = $_SESSION["supporter_details"];
+  }
+
   $title = "Preloved Pets - Supporters Home";
   include __DIR__ . "/../private/head.php";
-  //  Put post into session to submit on form submit
 ?>
 <body>
   <?php include __DIR__ . "/../private/header.php"; ?>
@@ -29,6 +37,7 @@
         } else {
           ?>
           <h1>Supporters Home</h1>
+          <a href="/supporters/update-submit">Update details</a>
           <?php
         }
       ?>

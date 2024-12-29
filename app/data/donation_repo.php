@@ -8,7 +8,6 @@
   require_once __DIR__ . "/database.php";
   require_once __DIR__ . "/../models/donation.php";
 
-
   class donation_repo
   {
     public database $database;
@@ -115,5 +114,19 @@
         $row["donation_message"],
         $row["comm_preference"]
       );
+    }
+
+    public function update_donation(int $donation_id, string $donation_name, string $donation_email, string $comm_preference): bool
+    {
+      $conn = $this->database->getConn();
+      $sql = $conn->prepare("
+        UPDATE public.donation SET 
+          donator_name = ?,
+          donation_email = ?,
+          comm_preference = ?
+        WHERE donation_id = ?"
+      );
+      $sql->bind_param("sssi", $donation_name, $donation_email, $comm_preference, $donation_id);
+      return $sql->execute();
     }
   }
