@@ -118,6 +118,10 @@ th[scope=row] {
   font-weight: 700;
 }
 
+.hidden-text {
+  display: none;
+}
+
 /*
  * Layout
  */
@@ -144,6 +148,10 @@ body {
   /*flex: 1 0;*/
 }
 
+main > h1 {
+  margin-bottom: 1rem;
+}
+
 /* Header layout */
 header.top-header {
   background-color: var(--hunter-green);
@@ -153,6 +161,7 @@ header.top-header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 2rem 0;
 }
 
 .header-content {
@@ -162,28 +171,41 @@ header.top-header {
   row-gap: 1rem;
 }
 
-.header-logo {
-  padding: 1.25rem 1.25rem 1.25rem 0;
+.header-links {
+  width: 100%;
+  align-items: flex-end;
+}
+
+.header-logo a {
+  display: flex;
+  align-items: center;
+  color: var(--sec-bg-colour);
+  text-decoration-line: none;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .nav-links {
   display: flex;
   flex-flow: row wrap;
   row-gap: 1rem;
-  column-gap: 1.25rem;
+  column-gap: 1.5rem;
   list-style: none;
   padding: 0;
 }
 
-.header-links a {
+.right-nav-links {
+  margin-right: auto;
+}
+
+.header-content a {
   color: var(--sec-bg-colour);
   text-decoration-line: none;
-  padding: 0.5rem;
   font-weight: bold;
   font-size: 1.3rem;
 }
 
-.header-links a:hover {
+.header-content a:hover {
   filter: brightness(1.25);
 }
 
@@ -258,6 +280,30 @@ ul.list-pets li > * {
   th, td {
     width: 50%;
   }
+}
+
+.contact-us {
+  margin: 1rem 0;
+}
+
+.contact-us > h2 {
+  margin-bottom: 0.5rem;
+}
+
+.google-maps-embed {
+  margin: 1rem 0;
+}
+
+.google-maps-embed p {
+  margin: 0.5rem 0;
+}
+
+a.anchor-button {
+  border: 2px solid var(--fern-green);
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  background-color: var(--brunswick-green);
+  color: var(--grey);
 }
 
 /* Footer layout */

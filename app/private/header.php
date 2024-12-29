@@ -13,36 +13,37 @@
 ?>
 <header class="top-header">
   <div class="header-content-wrapper">
-    <div class="header-content">
-      <div class="header-logo">
-        <a href="/">
-          <img src="../public/img/logo-text.svg" alt="Preloved pets logo" width="225"/>
-          <span class="hidden-text">Preloved Pets</span>
-        </a>
-      </div>
-      <nav>
-        <ul class="nav-links header-links">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/pets">Pets</a>
-          </li>
-          <li>
-            <a href="/donate">Donate</a>
-          </li>
-          <li>
-            <a href="/contact-us">Contact us</a>
-          </li>
-          <li>
-            <a href="/about-us">About us</a>
-          </li>
-          <li>
-            <a href="/news">News</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="header-content">
+      <ul class="nav-links header-links">
+        <li class="header-logo">
+          <a href="/">
+            <img src="../public/img/logo-text.svg" alt="Preloved pets logo" width="225"/>
+            <span class="hidden-text">Preloved Pets</span>
+          </a>
+        </li>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/pets">Pets</a>
+        </li>
+        <li>
+          <a href="/donate">Donate</a>
+        </li>
+        <li>
+          <a href="/contact-us">Contact us</a>
+        </li>
+        <li>
+          <a href="/about-us">About us</a>
+        </li>
+        <li class="right-nav-links">
+          <a href="/news">News</a>
+        </li>
+        <li>
+          <a class="anchor-button" href="/supporters/signin">Supporters sign in</a>
+        </li>
+      </ul>
+    </nav>
   </div>
   <div class="donation-alerts">
     <p class="scroll-text">

@@ -37,7 +37,7 @@
     case "/donation/submitted":
       $view = __DIR__ . "/views/donate-submitted.php";
       break;
-    case "/supporters/login":
+    case "/supporters/signin":
       $view = __DIR__ . "/views/supporters-signin.php";
       break;
     case "/supporters/home":
