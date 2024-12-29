@@ -78,20 +78,42 @@
       return $sql->execute();
     }
 
-    public function in_supporters_club(string $email): bool
+    /**
+     * @param string $email
+     * @return donation|null
+     */
+    public function in_supporters_club(string $email): ?donation
     {
       $conn = $this->database->getConn();
       $sql = $conn->prepare("
-        SELECT 1 AS 'present' FROM public.donation WHERE donation_email = ? AND donation_type_id = 1"
+        SELECT donation_id, 
+               donation_type_id, 
+               donator_name,
+               donation_email, 
+               donation_amount, 
+               donation_message,
+               comm_preference 
+        FROM public.donation WHERE donation_email = ? AND donation_type_id = 1"
       );
       $sql->bind_param("s", $email);
       $sql->execute();
 
       $result = $sql->get_result();
       $rows = $result->fetch_all(MYSQLI_ASSOC);
-      if (isset($rows[0])) {
-        return boolval($rows[0]["present"]);
+
+      if (count($rows) < 1) {
+        return null;
       }
-      return false;
+
+      $row = $rows[0];
+      return new donation(
+        intval($row["donation_id"]),
+        $row["donation_type_id"] == 1 ? "monthly" : "one_off",
+        $row["donator_name"],
+        $row["donation_email"],
+        floatval($row["donation_amount"]),
+        $row["donation_message"],
+        $row["comm_preference"]
+      );
     }
   }

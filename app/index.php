@@ -43,6 +43,12 @@
     case "/supporters/home":
       $view = __DIR__ . "/views/supporters-home.php";
       break;
+    case "/supporters/signout":
+      // Unset authentication
+      unset($_SESSION["supporter_details"]);
+      header("location:/");
+      // Redirect to home
+      break;
     default:
       http_response_code(404);
       $view = __DIR__ . "/views/404.php";

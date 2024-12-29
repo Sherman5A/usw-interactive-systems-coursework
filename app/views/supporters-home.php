@@ -10,7 +10,7 @@
 
   $donation_controller = new donation_controller($db);
   $missing_vars = false;
-  $is_member = $donation_controller->is_supporters_member($_POST["email"]);
+  $supporter_details = $donation_controller->is_supporters_member($_POST["email"]);
   $title = "Preloved Pets - Supporters Home";
   include __DIR__ . "/../private/head.php";
   //  Put post into session to submit on form submit
@@ -20,7 +20,7 @@
   <div class="main-content">
     <main>
       <?php
-        if (!$is_member) {
+        if (is_null($supporter_details)) {
           ?>
           <h1>Unauthorised. You are not a member</h1>
 

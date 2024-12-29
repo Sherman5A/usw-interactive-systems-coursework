@@ -38,9 +38,18 @@
         </li>
         <li class="right-nav-links">
           <a href="/news">News</a>
-        </li>
+        </li
         <li>
-          <a class="anchor-button" href="/supporters/signin">Supporters sign in</a>
+          <?php
+            if (is_null($_SESSION["supporter_details"])) {
+              ?>
+              <a class="anchor-button" href="/supporters/signin">Supporters sign in</a>
+            <?php } else {
+              ?>
+              <a class="anchor-button" href="/supporters/signout">Sign out</a>
+              <?php
+            }
+          ?>
         </li>
       </ul>
     </nav>
@@ -54,6 +63,5 @@
         }
       ?>
     </p>
-
   </div>
 </header>

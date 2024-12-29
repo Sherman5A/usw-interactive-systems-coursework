@@ -1,4 +1,5 @@
 <?php
+  declare(strict_types=1);
 
   namespace controllers;
 
@@ -46,8 +47,12 @@
       return $this->donation_repo->add_donation($new_donation);
     }
 
-    function is_supporters_member(string $email): bool
+    function is_supporters_member(string $email): ?donation
     {
-      return $this->donation_repo->in_supporters_club($email);
+      $in_supporters_club = $this->donation_repo->in_supporters_club($email);
+      if (isset($in_supporters_club)) {
+        $_SESSION["supporter_details"] = $in_supporters_club;
+      }
+      return $in_supporters_club;
     }
   }
