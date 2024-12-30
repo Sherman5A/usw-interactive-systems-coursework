@@ -37,7 +37,7 @@
           </label>
           <label for="donator-message">
             Donation message:
-            <textarea id="donator-message" name="donation-message" rows="4" cols="50"></textarea>
+            <textarea id="donator-message" name="donation-message" rows="4"></textarea>
           </label>
           <fieldset>
             <legend>Show donation on thank you banner above</legend>

@@ -16,7 +16,20 @@
   --link-hov: #003078;
 }
 
+@font-face {
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(LilitaOne-Regular.ttf);
+}
+
 /* Components */
+/* Main avoids affecting CSS in header and footers */
+main p, main h2 {
+  margin-bottom: 1rem;
+}
+
 input, textarea {
   display: block;
   background-color: var(--grey);
@@ -205,7 +218,7 @@ header.top-header {
   font-size: 1.3rem;
 }
 
-.header-content a:hover {
+.header-content a:hover, a.anchor-button:hover {
   filter: brightness(1.25);
 }
 
@@ -230,6 +243,10 @@ header.top-header {
 
 .donation-form input, .donation-form textarea {
   margin: 0.25rem 0;
+}
+
+.donation-form textarea {
+  width: 14rem;
 }
 
 form.hidden-form {
@@ -295,6 +312,10 @@ ul.list-pets li > * {
   margin: 1rem 0;
 }
 
+.google-maps-embed iframe {
+  max-width: 280px;
+}
+
 .google-maps-embed p {
   margin: 0.5rem 0;
 }
@@ -305,6 +326,66 @@ a.anchor-button {
   border-radius: 5px;
   background-color: var(--brunswick-green);
   color: var(--grey);
+}
+
+a.large-anchor-button {
+  padding: 0.8rem 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration-line: none;
+}
+
+.main-title {
+  font-family: "Lilita One", serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: var(--focus);
+}
+
+.secondary-title {
+  font-family: "Lilita One", serif;
+  font-size: 2.5rem;
+  color: var(--focus);
+}
+
+/* Top to bottom banner */
+.top-banner {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+}
+
+/* Side to side banner */
+.sideways-banner {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  margin-bottom: 3rem;
+  column-gap: 2rem;
+}
+
+.sideways-banner-reverse {
+  flex-direction: row-reverse;
+}
+
+.sideways-banner-text {
+  width: calc(50% - 2rem);
+  flex: 1 0 auto;
+}
+
+.sideways-banner-text > h1 {
+  margin-bottom: 0.5rem;
+}
+
+.sideways-banner-text > p {
+  margin-bottom: 2rem;
+}
+
+.sideways-banner-img {
+  width: 100%
+}
+
+.main-title-subtitle {
+  font-size: 1.5rem;
+  color: var(--focus);
 }
 
 /* Footer layout */
@@ -369,12 +450,20 @@ div.footer-content * {
   .main-content > main, .header-content, .footer-content {
     width: 80%;
   }
+
+  .google-maps-embed iframe {
+    max-width: 600px;
+  }
 }
 
 /* Medium */
 @media screen and (min-width: 768px) {
   .main-content > main, .header-content, .footer-content {
     width: 75%;
+  }
+
+  .sideways-banner-img {
+    max-width: calc(50% - 2rem);
   }
 }
 
