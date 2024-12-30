@@ -12,7 +12,6 @@
   $missing_vars = false;
   try {
     $result = $donation_controller->submit_donation();
-    // Clear session to prevent resubmitting
   } catch (Exception $e) {
     $title = $e->getMessage();
     $missing_vars = true;
@@ -84,7 +83,7 @@
               <th scope="col">Amount (£)</th>
               <td>
                 <?php
-                  echo htmlspecialchars(ucfirst($_SESSION["donator-amount"]));
+                  echo htmlspecialchars(ucfirst($_SESSION["donation-amount"]));
                 ?>
               </td>
             </tr>
@@ -93,6 +92,14 @@
               <td>
                 <?php
                   echo htmlspecialchars(ucfirst($_SESSION["donation-message"]));
+                ?>
+              </td>
+            </tr>
+            <tr>
+              <th scope="col">Show donation on banner</th>
+              <td>
+                <?php
+                  echo $_SESSION["show-billboard"] == "1" ? "Yes" : "No"
                 ?>
               </td>
             </tr>
@@ -108,6 +115,7 @@
         </table>
         <?php
       }
+        // Clear session to prevent resubmitting
         session_unset();
       ?>
     </main>

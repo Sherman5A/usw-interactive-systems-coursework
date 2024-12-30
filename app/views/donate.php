@@ -40,6 +40,17 @@
             <textarea id="donator-message" name="donation-message" rows="4" cols="50"></textarea>
           </label>
           <fieldset>
+            <legend>Show donation on thank you banner above</legend>
+            <label for="show-billboard-yes">
+              <input type="radio" id="show-billboard-yes" name="show-billboard" value="1">
+              Yes
+            </label>
+            <label for="show-billboard-no">
+              <input type="radio" id="show-billboard-no" name="show-billboard" value="0">
+              No
+            </label>
+          </fieldset>
+          <fieldset>
             <legend>
               (Optional)
               Communication preferences:

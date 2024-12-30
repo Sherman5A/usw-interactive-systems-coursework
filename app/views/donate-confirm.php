@@ -50,7 +50,7 @@
             <th scope="col">Amount (£)</th>
             <td>
               <?php
-                echo htmlspecialchars(ucfirst($_POST["donation-amount"]));
+                echo htmlspecialchars($_POST["donation-amount"]);
               ?>
             </td>
           </tr>
@@ -59,6 +59,14 @@
             <td>
               <?php
                 echo htmlspecialchars(ucfirst($_POST["donation-message"]));
+              ?>
+            </td>
+          </tr>
+          <tr>
+            <th scope="col">Show donation on banner</th>
+            <td>
+              <?php
+                echo $_POST["show-billboard"] == "1" ? "Yes" : "No"
               ?>
             </td>
           </tr>

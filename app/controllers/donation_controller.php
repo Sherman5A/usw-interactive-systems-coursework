@@ -31,7 +31,8 @@
         $_SESSION["donator-email"],
         $_SESSION["donation-amount"],
         $_SESSION["donation-message"],
-        $_SESSION["comm-preference"]
+        $_SESSION["comm-preference"],
+        $_SESSION["show-billboard"]
       )) {
         throw new Exception("Form data incomplete");
       }
@@ -40,9 +41,10 @@
         $_SESSION["donation-type"],
         $_SESSION["donator-name"],
         $_SESSION["donator-email"],
-        floatval(["donation-amount"]),
+        floatval($_SESSION["donation-amount"]),
         $_SESSION["donation-message"],
-        $_SESSION["comm-preference"]
+        $_SESSION["comm-preference"],
+        boolval(["show-billboard"])
       );
       return $this->donation_repo->add_donation($new_donation);
     }

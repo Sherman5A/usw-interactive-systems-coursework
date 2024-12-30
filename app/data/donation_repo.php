@@ -20,7 +20,7 @@
     /**
      * @return array<donation>
      */
-    public function get_donations(): array
+    public function get_banner_donations(): array
     {
       $conn = $this->database->getConn();
       $result = $conn->query("
@@ -30,8 +30,11 @@
                donation_email, 
                donation_amount, 
                donation_message,
-               comm_preference
-        FROM public.donation LIMIT 20"
+               comm_preference,
+               show_billboard
+        FROM public.donation
+        WHERE show_billboard = 1    
+        LIMIT 20"
       );
       $rows = $result->fetch_all(MYSQLI_ASSOC);
       /** @var array<donation> $donations */
@@ -44,7 +47,8 @@
           $row["donation_email"],
           floatval($row["donation_amount"]),
           $row["donation_message"],
-          $row["comm_preference"]
+          $row["comm_preference"],
+          boolval($row["show_billboard"])
         );
         $donations[] = $new_donation;
       }
@@ -62,16 +66,19 @@
 
       $sql = $conn->prepare("
         INSERT INTO public.donation
-            (donation_type_id, donator_name, donation_email, donation_amount, donation_message, comm_preference)
-        VALUES (?, ?, ?, ?, ?, ?);"
+            (donation_type_id, donator_name, donation_email, donation_amount, donation_message, comm_preference, show_billboard)
+        VALUES (?, ?, ?, ?, ?, ?, ?);"
       );
-      $sql->bind_param("issdss",
+      // Convert to int before passing to database
+      $show_billboard_int = intval($donation->showBillboard);
+      $sql->bind_param("issdssi",
         $donation_type_id,
         $donation->donationName,
         $donation->donationEmail,
         $donation->donationAmount,
         $donation->donationMessage,
-        $donation->commPreference
+        $donation->commPreference,
+        $show_billboard_int
       );
 
       return $sql->execute();
@@ -112,7 +119,8 @@
         $row["donation_email"],
         floatval($row["donation_amount"]),
         $row["donation_message"],
-        $row["comm_preference"]
+        $row["comm_preference"],
+        $row["show_billboard"]
       );
     }
 

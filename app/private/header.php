@@ -9,7 +9,7 @@
   use data\donation_repo;
 
   $donation_repo = new donation_repo($db);
-  $donations = $donation_repo->get_donations();
+  $donations = $donation_repo->get_banner_donations();
 ?>
 <header class="top-header">
   <div class="header-content-wrapper">

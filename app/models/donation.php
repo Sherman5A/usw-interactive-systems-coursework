@@ -12,9 +12,10 @@
     public float $donationAmount;
     public string $donationMessage;
     public string $commPreference;
+    public bool $showBillboard;
 
     public function __construct(?int  $donationId, string $donationType, string $donationName, string $donationEmail,
-                                float $donationAmount, string $donationMessage, string $commPreference)
+                                float $donationAmount, string $donationMessage, string $commPreference, $showBillboard)
     {
       $this->donationId = $donationId;
       $this->donationType = $donationType;
@@ -23,5 +24,6 @@
       $this->donationAmount = $donationAmount;
       $this->donationMessage = $donationMessage;
       $this->commPreference = $commPreference;
+      $this->showBillboard = $showBillboard;
     }
   }
