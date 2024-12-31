@@ -51,7 +51,11 @@
                   </tr>
                 </tbody>
               </table>
-
+              <a
+                href="mailto:23056792@students.southwales.ac.uk?subject=Pet Enquiry <?php echo htmlspecialchars(ucfirst($pet->pet_name)) ?>"
+                class="anchor-button large-anchor-button">
+                Enquire about <?php echo htmlspecialchars(ucfirst($pet->pet_name)) ?>
+              </a>
             </li>
             <?php
           }
