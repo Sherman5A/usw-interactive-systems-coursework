@@ -17,7 +17,7 @@
         <div class="sideways-banner-text">
           <h1 class="main-title">Donate to give pets without owners a new family</h1>
           <p class="main-title-subtitle">
-            Help us house pets until they find a new, loving family
+            Monthly donors get an exclusive newsletter and club area!
           </p>
           <a href="/donate" class="anchor-button large-anchor-button">Donate today</a>
         </div>

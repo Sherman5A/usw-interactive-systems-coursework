@@ -37,6 +37,11 @@
           this email <a href="mailto:23056792@students.southwales.ac.uk?subject=Volunteer Request">23056792@students.southwales.ac.uk</a>.
         </p>
         <p>
+          <span class="bold-text">
+            Monthly donors can join the members club and receive a monthly exclusive newsletter!
+          </span>
+        </p>
+        <p>
           Your support is invaluable,
           <br>
           Preloved Pets
@@ -64,8 +69,10 @@
           coverage of pets.
         </p>
         <p>
-          To continue contributing to the goal, please donate <a href="/donate">here</a>. Donors who subscribe to the
-          monthly members club receive an exclusive newsletter!
+          To continue contributing to the goal, please donate <a href="/donate">here</a>.
+          <span class="bold-text">
+            Monthly donors can join the members club and receive a monthly exclusive newsletter!
+          </span>
         </p>
       </div>
       <div class="news-article">
@@ -95,6 +102,11 @@
           Volunteers are extremely appreciated and should contact us using one of the methods outlined
           <a href="/contact-us">here</a> or with this email
           <a href="mailto:23056792@students.southwales.ac.uk?subject=Volunteer Request">23056792@students.southwales.ac.uk</a>.
+        </p>
+        <p>
+          <span class="bold-text">
+            Monthly donors can join the members club and receive a monthly exclusive newsletter!
+          </span>
         </p>
       </div>
     </main>
