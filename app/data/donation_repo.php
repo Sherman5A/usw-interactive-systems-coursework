@@ -22,6 +22,7 @@
      */
     public function get_banner_donations(): array
     {
+      $donation_types = $this->get_donation_types();
       $conn = $this->database->getConn();
       $result = $conn->query("
         SELECT donation_id, 
@@ -42,7 +43,7 @@
       foreach ($rows as $row) {
         $new_donation = new donation(
           intval($row["donation_id"]),
-          $row["donation_type_id"] == 1 ? "monthly" : "one_off",
+          $donation_types[intval($row["donation_type_id"])],
           $row["donator_name"],
           $row["donation_email"],
           floatval($row["donation_amount"]),
@@ -55,13 +56,39 @@
       return $donations;
     }
 
+    /**
+     * @return array<int,string>
+     */
+    public function get_donation_types(): array
+    {
+      $conn = $this->database->getConn();
+      $result = $conn->query("
+        SELECT donation_type_id, donation_type
+        FROM public.donation_type"
+      );
+      $rows = $result->fetch_all(MYSQLI_ASSOC);
+      /** @var array<int, string> $donation_types */
+      $donation_types = array();
+      foreach ($rows as $row) {
+        $donation_types[$row["donation_type_id"]] = $row["donation_type"];
+      }
+      return $donation_types;
+    }
+
     public function add_donation(donation $donation): bool
     {
       $conn = $this->database->getConn();
-      if ($donation->donationType == "monthly") {
-        $donation_type_id = 1;
-      } else {
-        $donation_type_id = 2;
+      switch ($donation->donationType) {
+        case "monthly":
+          $donation_type_id = 1;
+          break;
+        case "will":
+          $donation_type_id = 3;
+          break;
+        case "one-time":
+        default:
+          $donation_type_id = 2;
+          break;
       }
 
       $sql = $conn->prepare("

@@ -25,10 +25,13 @@
               <input type="radio" id="donation-type-one-time" name="donation-type" value="one-time">
               One time
             </label>
-            <!-- TODO: Add will section-->
             <label for="donation-type-monthly">
               <input type="radio" id="donation-type-monthly" name="donation-type" value="monthly">
               Monthly - Gain access to supporters club area!
+            </label>
+            <label for="donation-type-will">
+              <input type="radio" id="donation-type-will" name="donation-type" value="will">
+              Will
             </label>
           </fieldset>
           <label for="donation-amount">

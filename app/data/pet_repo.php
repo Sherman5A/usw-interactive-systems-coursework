@@ -59,7 +59,7 @@
     }
 
     /**
-     * @return array
+     * @return array<int, string>
      */
     private function get_pet_types(): array
     {
