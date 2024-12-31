@@ -18,6 +18,11 @@
   <div class="main-content">
     <main>
       <h1>Pets</h1>
+      <p>These pets currently do not have a family due to their owners deaths.</p>
+      <p>
+        Visits to meet the pets can be scheduled by selecting the enquire button.
+        Preloved Pets' location can be found <a href="/contact-us#in-person">here</a>.
+      </p>
       <ul class="list-pets">
         <?php
           foreach ($pets as $pet) {

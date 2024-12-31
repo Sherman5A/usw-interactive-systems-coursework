@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="contact-us">
-        <h2>
+        <h2 id="in-person">
           In-Person
         </h2>
         <div class="inset-text">
