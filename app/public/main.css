@@ -458,6 +458,11 @@ div.footer-content * {
   column-gap: 0.4rem;
 }
 
+.inset-text {
+  border-left: 4px solid var(--grey);
+  padding-left: 15px;
+}
+
 /*
  * Media queries for responsive design
  * Using the default bootstrap endpoint sizes as these are most common
