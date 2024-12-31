@@ -314,6 +314,10 @@ ul.list-pets li > a.anchor-button {
   }
 }
 
+.bold-text {
+  font-weight: bold;
+}
+
 .contact-us {
   margin: 1rem 0;
 }
@@ -348,6 +352,16 @@ a.large-anchor-button {
   font-size: 1.5rem;
   font-weight: 700;
   text-decoration-line: none;
+}
+
+a.grey-anchor {
+  background-color: var(--timberwolf);
+  color: var(--focus);
+  border-color: var(--mid-grey);
+}
+
+a.grey-anchor:hover {
+  filter: brightness(1.1);
 }
 
 .main-title {

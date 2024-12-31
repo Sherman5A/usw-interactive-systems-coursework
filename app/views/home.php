@@ -31,7 +31,7 @@
             We are a local charity that finds new, loving families for pets after their owners have died.
           </h2>
           <p class="main-title-subtitle">We currently accept cats, dogs, and rodents.</p>
-          <a href="/about-us" class="anchor-button large-anchor-button">About us</a>
+          <a href="/about-us" class="anchor-button large-anchor-button grey-anchor">About us</a>
         </div>
         <div class="sideways-banner-img">
           <img src="/public/img/held-cat.jpg" alt="Member of staff holding an upside down cat">
