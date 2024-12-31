@@ -39,6 +39,14 @@
         <li class="right-nav-links">
           <a href="/contact-us">Contact us</a>
         </li>
+        <?php if (isset($_SESSION["supporter_details"])) {
+          ?>
+          <li>
+            <a class="anchor-button" href="/supporters/home">Supporters home</a>
+          </li>
+          <?php
+        }
+        ?>
         <li>
           <?php
             if (is_null($_SESSION["supporter_details"])) {
@@ -58,8 +66,12 @@
     <p class="scroll-text">
       <?php
         foreach ($donations as $donation) {
-          $donationText = htmlspecialchars("{$donation->donationName} donated £{$donation->donationAmount} saying '$donation->donationMessage'");
-          echo "<span class='scroll-text-donation'> $donationText</span>";
+          if (strlen($donation->donationMessage) == 0) {
+            $donationText = htmlspecialchars("{$donation->donationName} donated £{$donation->donationAmount}");
+          } else {
+            $donationText = htmlspecialchars("{$donation->donationName} donated £{$donation->donationAmount} saying '$donation->donationMessage'");
+          }
+          echo "<span class='scroll-text-donation'>$donationText</span>";
         }
       ?>
     </p>

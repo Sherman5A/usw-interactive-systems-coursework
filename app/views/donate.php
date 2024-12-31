@@ -12,22 +12,22 @@
         <fieldset>
           <legend>Details:</legend>
           <label for="donor-name">
-            Name:
-            <input type="text" id="donor-name" name="donator-name">
+            Name:<span class="form-required">*</span>
+            <input type="text" id="donor-name" name="donator-name" required>
           </label>
           <label for="donor-email">
-            Email:
-            <input type="email" id="donor-email" name="donator-email">
+            Email:<span class="form-required">*</span>
+            <input type="email" id="donor-email" name="donator-email" required>
           </label>
           <fieldset>
-            <legend class="donation-type">Donation type:</legend>
+            <legend class="donation-type">Donation type:<span class="form-required">*</span></legend>
             <label for="donation-type-one-time">
-              <input type="radio" id="donation-type-one-time" name="donation-type" value="one-time">
+              <input type="radio" id="donation-type-one-time" name="donation-type" value="one-time" required>
               One time
             </label>
             <label for="donation-type-monthly">
-              <input type="radio" id="donation-type-monthly" name="donation-type" value="monthly">
-              Monthly - Gain access to supporters club area!
+              <input type="radio" id="donation-type-monthly" name="donation-type" value="monthly" checked>
+              Monthly - <span class="bold-text">Gain access to supporters club area!</span>
             </label>
             <label for="donation-type-will">
               <input type="radio" id="donation-type-will" name="donation-type" value="will">
@@ -35,7 +35,7 @@
             </label>
           </fieldset>
           <label for="donation-amount">
-            Amount: (£)
+            Amount:<span class="form-required">*</span> (£)
             <input type="number" min="1" step="0.01" value="5" required id="donation-amount" name="donation-amount">
           </label>
           <label for="donator-message">
@@ -43,9 +43,9 @@
             <textarea id="donator-message" name="donation-message" rows="4"></textarea>
           </label>
           <fieldset>
-            <legend>Show donation on thank you banner above</legend>
+            <legend>Show donation on thank you banner above:<span class="form-required">*</span></legend>
             <label for="show-billboard-yes">
-              <input type="radio" id="show-billboard-yes" name="show-billboard" value="1">
+              <input type="radio" id="show-billboard-yes" name="show-billboard" value="1" required checked>
               Yes
             </label>
             <label for="show-billboard-no">
@@ -63,7 +63,7 @@
               Newsletter
             </label>
             <label for="comm-email">
-              <input type="checkbox" id="comm-email" name="comm-preference" value="email">
+              <input type="checkbox" id="comm-email" name="comm-preference" value="email" checked>
               Email
             </label>
             <label for="comm-phone">

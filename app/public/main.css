@@ -91,6 +91,10 @@ form.hidden-form {
   margin: 1rem 0;
 }
 
+.form-required {
+  color: darkred;
+}
+
 /* Anchor tags */
 a:visited {
   color: #6a17b9;
@@ -442,7 +446,7 @@ ul.list-pets li > a.anchor-button {
 .news-article {
   background-color: var(--sec-bg-colour);
   padding: 1.5rem;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 .news-article-img {
