@@ -125,8 +125,9 @@
                donation_email, 
                donation_amount, 
                donation_message,
-               comm_preference 
-        FROM public.donation WHERE donation_email = ? AND donation_type_id = 1"
+               comm_preference,
+               show_billboard
+        FROM public.donation WHERE donation_email = ?"
       );
       $sql->bind_param("s", $email);
       $sql->execute();
@@ -147,7 +148,7 @@
         floatval($row["donation_amount"]),
         $row["donation_message"],
         $row["comm_preference"],
-        $row["show_billboard"]
+        boolval($row["show_billboard"])
       );
     }
 
