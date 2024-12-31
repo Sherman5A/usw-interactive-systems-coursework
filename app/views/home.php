@@ -40,10 +40,43 @@
       <div class="sideways-banner">
         <div class="sideways-banner-text">
           <h2 class="secondary-title">Help us keep reptiles and fish</h2>
-          <a href="/donate" class="anchor-button large-anchor-button">Donate today</a>
+          <p class="main-title-subtitle">
+            With <span class="bold-text">your</span> help, we want to expand to housing rodents, reptiles and fish in
+            need.
+          </p>
+          <a href="/donate" class="anchor-button large-anchor-button">Donate to our goal</a>
         </div>
         <div class="sideways-banner-img">
           <img src="/public/img/fish.jpg" alt="Goldfish in aquarium">
+        </div>
+      </div>
+      <div>
+        <h2 class="secondary-title">Latest News</h2>
+        <div class="adjacent-articles">
+          <a href="/news" class="adjacent-article">
+            <div class="adjacent-article-title">
+              <h3>Large trust donation</h3>
+              <img src="/public/img/cheque-handover.jpg" alt="Person handing cheque to another person">
+            </div>
+            <p>We have received a £2,000 donation from a local charity trust to help continue housing more pets.</p>
+          </a>
+          <a href="/news" class="adjacent-article">
+            <div class="adjacent-article-title">
+              <h3>Update on reptile housing goal</h3>
+              <img src="/public/img/leopard-gecko.jpg" alt="Picture of a pet Leopard Gecko in a enclosure">
+            </div>
+            <p>Our reptile housing goal has progressed to 50% completion due to all of your support.</p>
+          </a>
+          <a href="/news" class="adjacent-article">
+            <div class="adjacent-article-title">
+              <h3>New pet area</h3>
+              <img src="/public/img/pet-area.jpg" alt="Picture of pet play area">
+            </div>
+            <p>
+              Due to your donations, we have installed a new internal pet area. This allows our staff to entertain
+              housed cats and dogs during bad, rainy conditions
+            </p>
+          </a>
         </div>
       </div>
     </main>
