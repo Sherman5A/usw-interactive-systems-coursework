@@ -6,7 +6,7 @@
   <?php include __DIR__ . "/../private/header.php"; ?>
   <div class="main-content">
     <main class="about-us">
-      <div class="top-banner">
+      <div class="reverse-header-img">
         <h1>About us</h1>
         <div class="top-banner-img">
           <img src="/public/img/cat-licking-paw.jpg" alt="White and brown cat licking it's paw">

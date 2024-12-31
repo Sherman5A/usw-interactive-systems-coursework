@@ -437,6 +437,23 @@ ul.list-pets li > a.anchor-button {
   text-align: center;
 }
 
+/* News page */
+
+.news-article {
+  background-color: var(--sec-bg-colour);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.news-article-img {
+  display: flex;
+  justify-content: center;
+}
+
+.news-article-img img {
+  width: 100%;
+}
+
 /* Home page */
 .main-title {
   font-family: "Lilita One", serif;
@@ -457,7 +474,7 @@ ul.list-pets li > a.anchor-button {
 }
 
 /* Top to bottom banner */
-.top-banner {
+.reverse-header-img {
   display: flex;
   flex-flow: column-reverse nowrap;
   row-gap: 1rem;
@@ -583,6 +600,10 @@ ul.list-pets li > a.anchor-button {
 @media screen and (min-width: 1200px) {
   .main-content > main, .header-content, .footer-content {
     width: 65%;
+  }
+
+  .news-article-img img {
+    width: 50%;
   }
 }
 

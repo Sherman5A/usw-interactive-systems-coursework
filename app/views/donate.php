@@ -11,13 +11,13 @@
         <h2>Donation form</h2>
         <fieldset>
           <legend>Details:</legend>
-          <label for="donator-name">
+          <label for="donor-name">
             Name:
-            <input type="text" id="donator-name" name="donator-name">
+            <input type="text" id="donor-name" name="donator-name">
           </label>
-          <label for="donator-email">
+          <label for="donor-email">
             Email:
-            <input type="email" id="donator-email" name="donator-email">
+            <input type="email" id="donor-email" name="donator-email">
           </label>
           <fieldset>
             <legend class="donation-type">Donation type:</legend>

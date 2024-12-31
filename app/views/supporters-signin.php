@@ -9,7 +9,7 @@
       <h1>Supporters Club Login</h1>
       <form action="/supporters/home" method="post" class="donation-form">
         <h2>Sign in details</h2>
-        <label for="donator-email">
+        <label for="email">
           Email:
           <input type="email" id="email" name="email">
         </label>

@@ -27,17 +27,17 @@
           ?>
           <h1>Update supporters club details</h1>
           <form action="/supporters/update-submit" method="post" class="donation-form">
-            <h2>Donator details</h2>
+            <h2>Donor details</h2>
             <fieldset>
-              <label for="donator-name">
+              <label for="donor-name">
                 Name:
-                <input type="text" id="donator-name" name="donator-name"
+                <input type="text" id="donor-name" name="donator-name"
                        value="<?php echo htmlspecialchars($donator_details->donationName) ?>"
                 >
               </label>
-              <label for="donator-email">
+              <label for="donor-email">
                 Email:
-                <input type="email" id="donator-email" name="donator-email"
+                <input type="email" id="donor-email" name="donator-email"
                        value="<?php echo htmlspecialchars($donator_details->donationEmail) ?>">
               </label>
               <fieldset>
