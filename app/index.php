@@ -29,9 +29,6 @@
     case "/about-us":
       $view = __DIR__ . "/views/about-us.php";
       break;
-    case "/directions":
-      $view = __DIR__ . "/views/directions.php";
-      break;
     case "/news":
       $view = __DIR__ . "/views/news.php";
       break;
@@ -60,6 +57,7 @@
       // Redirect to home
       break;
     default:
+      header("location:/404");
       http_response_code(404);
       $view = __DIR__ . "/views/404.php";
       break;

@@ -11,10 +11,10 @@
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/pets">Pets</a>
+          <a href="/donate">Donate</a>
         </li>
         <li>
-          <a href="/donate">Donate</a>
+          <a href="/pets">Pets</a>
         </li>
         <li>
           <a href="/news">News</a>
@@ -23,10 +23,10 @@
           <a href="/about-us">About us</a>
         </li>
         <li>
-          <a href="/directions">Directions</a>
+          <a href="/contact-us">Contact us</a>
         </li>
         <li>
-          <a href="/contact-us">Contact us</a>
+          <a href="/supporters/signin">Sign in</a>
         </li>
       </ul>
       <ul class="nav-links">

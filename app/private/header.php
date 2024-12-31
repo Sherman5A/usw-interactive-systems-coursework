@@ -25,19 +25,19 @@
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/pets">Pets</a>
-        </li>
-        <li>
           <a href="/donate">Donate</a>
         </li>
         <li>
-          <a href="/contact-us">Contact us</a>
+          <a href="/pets">Pets</a>
+        </li>
+        <li>
+          <a href="/news">News</a>
         </li>
         <li>
           <a href="/about-us">About us</a>
         </li>
         <li class="right-nav-links">
-          <a href="/news">News</a>
+          <a href="/contact-us">Contact us</a>
         </li>
         <li>
           <?php
