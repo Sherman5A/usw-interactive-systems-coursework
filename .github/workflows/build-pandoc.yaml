@@ -1,0 +1,32 @@
+name: Build Pandoc PDF
+on: 
+  push:
+    branches: ["main"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: pandoc/extra:3.2.0-alpine
+      options: --entrypoint=sh
+    steps:
+      - uses: actions/checkout@v4
+      - name: create pdf file
+        id: create-pdf
+        run: |
+            cd report
+            mkdir output
+            pandoc report.md \
+              -t latex \
+              --from markdown \
+              --listings \
+              --citeproc \
+              --bibliography=references.json \
+              --template /.pandoc/templates/eisvogel.latex \
+              --output=output/report.pdf
+      - uses: actions/upload-artifact@v4
+        id: upload-pdf
+        with:
+          name: output
+          path: |
+            report/output/*.pdf
+
