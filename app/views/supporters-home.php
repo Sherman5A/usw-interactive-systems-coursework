@@ -37,7 +37,7 @@
         } else {
           ?>
           <h1>Supporters home</h1>
-          <a class="anchor-button large-anchor-button" style="margin-bottom: 1rem" href="/supporters/update-submit">Update
+          <a class="anchor-button large-anchor-button" style="margin-bottom: 1rem" href="/supporters/update">Update
             supporter details</a>
           <h2>Supporters news</h2>
           <div class="news-article">
