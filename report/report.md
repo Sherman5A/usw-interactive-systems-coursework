@@ -20,7 +20,47 @@ nocite: |
 
 ### Personality and Tone
 
-![Preloved Pets entity relationship diagram](images/preloved-pets-erd.png)
+### Wireflows
+
+#### Donation wireflows
+
+Desktop,
+
+![Desktop donation wireflow](images/wireframes/flows/desktop-donation-flow.png)
+
+Mobile,
+
+![Mobile donation wireflow](images/wireframes/flows/mobile-donation-flow.png)
+
+#### Adopt pet flow
+
+Desktop,
+
+![Desktop adoption wireflow](images/wireframes/flows/desktop-adopt-pet-flow.png)
+
+Mobile,
+
+![Mobile adoption wireflow](images/wireframes/flows/mobile-adopt-pet-flow.png)
+
+#### Sign in flow
+
+Desktop,
+
+![Desktop sign in wireflow](images/wireframes/flows/desktop-sign-in-flow.png)
+
+Mobile,
+
+![Mobile sign in wireflow](images/wireframes/flows/mobile-sign-in-flow.png)
+
+#### Update supporter account details flow
+
+Desktop,
+
+![Desktop update supporter account details](images/wireframes/flows/desktop-update-details-flow.png)
+
+Mobile,
+
+![Mobile update supporter account details](images/wireframes/flows/mobile-update-deatils-flow.png)
 
 ### Persuasive Tactics
 
