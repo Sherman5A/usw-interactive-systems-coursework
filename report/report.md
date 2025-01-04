@@ -20,7 +20,7 @@ nocite: |
 
 ### Personality and Tone
 
-![Preloved Pets Sitemap](images/preloved-pets-erd.svg)
+![Preloved Pets Sitemap](images/preloved-pets-erd.png)
 
 ### Persuasive Tactics
 
