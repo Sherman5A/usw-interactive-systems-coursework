@@ -206,42 +206,44 @@ The entire site is PHP,
 
 Images used:
 
-- Preloved Pets logo - [source](https://www.svgrepo.com/svg/172049/animal-shelter)
+- Preloved Pets logo [@AnimalShelterVector]
   - CC0
 - Contact us
-  - X icon - [source](https://simpleicons.org/icons/x.svg)
+  - X icon [@simpleiconscontributorsSimpleIcons]
     - CCO
-  - Instagram icon - [source](https://simpleicons.org/?q=instagram)
+  - Instagram icon [@simpleiconscontributorsSimpleIcons]
     - CC0
-  - YouTube icon - [source](https://simpleicons.org/?q=Youtube)
+  - YouTube icon [@simpleiconscontributorsSimpleIcons]
     - CC0
-  - Facebook icon - [source](https://simpleicons.org/?q=Facebook)
+  - Facebook icon [@simpleiconscontributorsSimpleIcons]
     - CC0
 - Pets page
-  - Gwen image - [source](https://humanepro.org/sites/default/files/styles/article_new/public/images/hero/Sampa_12626.jpg?itok=oR45nIIo)
-  - Lulu image - [source](https://commons.wikimedia.org/wiki/File:Dog-2016-11-a.jpg)
+  - Gwen image [@falconerShelteringTimeCoronavirus]
+  - Lulu image [@kreuzschnabelEnglishDogSitting2016]
     - Free Art License 1.3
-  - Cat image - [source](https://www.operationkindness.org/wp-content/uploads/blog-june-adopt-shelter-cat-month-operation-kindness.jpg)
-  - Rodent image - [source](https://www.pexels.com/photo/white-rat-on-a-blanket-26158915/)
+  - Cat image [@operationkindnessJuneNationalAdopt2020]
+  - Rodent image [@PhotoNikolettEmmert2024]
     - Pexels licence
       - All photos and videos on Pexels are free to use.
 - Home
-  - Dog image - [source](https://pxhere.com/en/photo/934965)
+  - Dog image [@pxherePxhereImage934965]
     - CC0
-  - Staff holding cat - [source](https://www.shutterstock.com/image-photo/cat-animal-shelter-1773024227)
-  - Fish - [source](https://pixabay.com/photos/goldfish-lion-head-aquarium-2285528/)
+  - Staff holding cat [@jwdesignCatAnimalShelter2020]
+  - Fish [@tdesignsGoldfishLionHead2017]
     - Pixababy licence
       - Use Content for free
 - News:
-  - News article - trust cheque - [source](https://pixahive.com/photo/filling-a-bank-cheque/)
+  - News article [@devaprasadFillingBankCheque2020]
     - CC0
-  - News article -  Leopard Gecko - [source](https://www.thesprucepets.com/thmb/otgtEGZo0xa4jLjIiKUoh3PRwTw=/4543x0/filters:no_upscale():strip_icc()/leopard-geckos-1236911-01-20aac80501f241f593afcaa7c835de33.jpg)
-  - News article - dog park - [source](https://photos.bringfido.com/photo/2020/01/14/Gearhart_Indoor_Dog_Park.jpg)
+  - News article [@mcleodHowCarePet24]
+  - News article [@francisIndoorDogParks2022]
 - About us
-  - Cat in about us - [source](https://freerangestock.com/sample/172313/tabby-cat-licking-its-paw-outdoor.jpg)
+  - Cat in about us [@liveseyFreeStockPhoto]
     - CC0
-  - Our founder - [source](https://stock.adobe.com/search/images?k=vet+with+cat+and+dog&asset_id=395616844)
+  - Our founder [@tan4ikkVetDogCat]
     - Adobe Standard licence
       - Include the asset in email marketing, mobile advertising, or a broadcast or digital program if the expected number of viewers is fewer than 500,000.
       - Post the asset to a website or social media site with no limitation on views.
-  - Our staff - [source](https://media.istockphoto.com/id/521072827/photo/dog-at-the-vet.jpg?s=612x612&w=0&k=20&c=31QtBlqvv4f3xFftDL2i7avElZ8IeUFD3Bd7b2UaHw0=)
+  - Our staff [@andresrDogVetStock2014]
+
+### Bibliography and Usages
