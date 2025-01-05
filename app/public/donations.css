@@ -3,6 +3,7 @@
  * Stored separately as it involves keyframes
  */
 
+/* Scrolling donation text */
 .scroll-text {
   text-align: right;
   animation: scroll-animation 30s linear infinite;

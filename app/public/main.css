@@ -398,14 +398,14 @@ ul.list-pets li > a.anchor-button {
   background-color: transparent;
   width: 100%;
   padding: 0;
+}
 
-  tbody {
-    background-color: transparent;
-  }
+.pet-details tbody {
+  background-color: transparent;
+}
 
-  th, td {
-    width: 50%;
-  }
+.pet-details th, .pet-details td {
+  width: 50%;
 }
 
 /* Contact us page */
@@ -442,7 +442,6 @@ ul.list-pets li > a.anchor-button {
 }
 
 /* News page */
-
 .news-article {
   background-color: var(--sec-bg-colour);
   padding: 1.5rem;
@@ -517,6 +516,7 @@ ul.list-pets li > a.anchor-button {
   width: 100%
 }
 
+/* Side by side articles */
 .adjacent-articles {
   display: flex;
   flex-flow: row wrap;
