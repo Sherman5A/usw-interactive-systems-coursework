@@ -2,6 +2,8 @@ name: Build Pandoc PDF
 on: 
   push:
     branches: ["main"]
+    paths:
+      - "report/**"
 jobs:
   build:
     runs-on: ubuntu-latest
