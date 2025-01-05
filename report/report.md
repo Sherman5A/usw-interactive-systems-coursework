@@ -1416,7 +1416,8 @@ differently, resulting in an inconsistent experience across browsers. Therefore,
 a CSS reset style sheet is used to standardise the presentation across browser
 families, providing a starting point for CSS styling [@mayerCSSToolsReset].
 The CSS reset used is an edited combination of 2 style sheets,
-'A Modern CSS Reset' [@comeauModernCSSReset2024] and 'A (more) Modern CSS Reset' [-@bellMoreModernCSS2023]. Unnecessary rules were removed, comments were added,
+'A Modern CSS Reset' [@comeauModernCSSReset2024] and 'A (more) Modern CSS Reset'
+[-@bellMoreModernCSS2023]. Unnecessary rules were removed, comments were added,
 and rules were modified.
 
 In the `main.css`, first the root colours for the entire website are defined in
