@@ -1469,4 +1469,32 @@ animations were used as the `marque` tag in favour of this method
 
 ### Reflection
 
+Overall, the coursework went quite well. Despite never developing with PHP before,
+the coursework went well. Various patterns such as routing, separation
+of frontend and backend, and object-oriented programming were used, and the
+codebase was clearly structured. This coursework provided a great opportunity
+to learn PHP's installation, syntax, structure, and workflow. Moreover, database
+connectivity was very successful. MySQL was very similar to other SQL databases
+so my knowledge transferred well and PHP connected quite seamlessly aside from
+finding the right SQL credentials. Throughout the coursework, CSS was a
+strength due prior knowledge of Flexboxes, responsive design, and selectors.
+During responsive testing, the layout behaved very well, even on the smallest
+screen sizes, such as the IPhone 5 / SE. Unfortunately, the style sheet did grow
+quite large; a smaller style sheet would have been preferable. Finally,
+accessibility was a big focus during design and development. All colours on the
+website are WCAG AA compliant, semantic HTML was used throughout, all images
+have suitable alt tags, and all HTML and CSS is valid. On the other hand, one
+of the biggest challenges encountered was addressing the inability to create
+a dynamic website. JavaScript was not in the brief's scope; thus it was not
+used at all in the project. However, JavaScript's addition would greatly expand
+the capabilities of the site, especially in mobile accessibility. For example,
+the large heading could be replaced by an expandable menu button, reducing
+visual clutter. One of the biggest difficulties was creating example content
+for the website; writing home page, and about us content in the correct tone
+was strenuous. Furthermore, sourcing suitable images was quite challenging.
+Many images had either unsuitable licences, or completely lacked one, and the
+quality of the images was a weakness. Overall, the coursework was successful
+and provided a great learning PHP learning opportunity; however, writing and
+sourcing content for the website was difficult.
+
 ## Bibliography and Usages
