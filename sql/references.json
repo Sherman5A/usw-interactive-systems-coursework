@@ -388,39 +388,6 @@
     "URL": "https://www.thesprucepets.com/leopard-geckos-1236911"
   },
   {
-    "id": "mdnMarqueeElementHTML2024",
-    "abstract": "The <marquee> HTML element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.",
-    "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          1,
-          5
-        ]
-      ]
-    },
-    "author": [
-      {
-        "literal": "MDN"
-      }
-    ],
-    "citation-key": "mdnMarqueeElementHTML2024",
-    "issued": {
-      "date-parts": [
-        [
-          "2024",
-          10,
-          23
-        ]
-      ]
-    },
-    "language": "en-US",
-    "title": "<marquee>: The Marquee element - HTML: HyperText Markup Language | MDN",
-    "title-short": "<marquee>",
-    "type": "webpage",
-    "URL": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee"
-  },
-  {
     "id": "montoreanoLilitaOneFont",
     "abstract": "Download Lilita One Font · Free for commercial use · Lilita One is a display typeface with a fat look, ideal for headlines and short texts. With a slightly condensed structure and some eye-catching detai",
     "accessed": {

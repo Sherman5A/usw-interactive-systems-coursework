@@ -583,11 +583,14 @@ Images used:
     - CC0
   - Our founder [@tan4ikkVetDogCat]
     - Adobe Standard licence
-      - Include the asset in email marketing, mobile advertising, or a broadcast or digital program if the expected number of viewers is fewer than 500,000.
-      - Post the asset to a website or social media site with no limitation on views.
+      - Include the asset in email marketing, mobile advertising, or a broadcast
+        or digital program if the expected number of viewers is fewer than
+        500,000.
+      - Post the asset to a website or social media site with no limitation on
+        views.
   - Our staff [@andresrDogVetStock2014]
   
-Embeds used:
+Embedded elements used:
 
 - Google Maps iframe [@googleGoogleMaps]
   - SIL Open Font License (OFL)
@@ -1407,23 +1410,61 @@ ul.list-pets li>a.anchor-button {
 ### Cascading Style Sheets Explanation
 
 The `reset.css` file aims overwrite default browser styles to a default,
-unopinionated, neutral state. Different browsers have distinct presentation defaults;
-Gecko (Firefox), Safari, and Chromium based browsers all present pages differently,
-resulting in an inconsistent experience across browsers. Therefore, a CSS reset
-style sheet is used to standardise the presentation across browser families,
-providing a starting point for CSS styling [@mayerCSSToolsReset]. The CSS reset used
-is an edited combination of 2 style sheets, 'A Modern CSS Reset'
-[@comeauModernCSSReset2024] and 'A (more) Modern CSS Reset' [-@bellMoreModernCSS2023].
-Unnecessary rules were removed, comments were added, and rules were modified.
-
-`main.css`,
+unopinionated, neutral state. Different browsers have distinct presentation
+defaults; Gecko (Firefox), Safari, and Chromium based browsers all present pages
+differently, resulting in an inconsistent experience across browsers. Therefore,
+a CSS reset style sheet is used to standardise the presentation across browser
+families, providing a starting point for CSS styling [@mayerCSSToolsReset].
+The CSS reset used is an edited combination of 2 style sheets,
+'A Modern CSS Reset' [@comeauModernCSSReset2024] and 'A (more) Modern CSS Reset' [-@bellMoreModernCSS2023]. Unnecessary rules were removed, comments were added,
+and rules were modified.
 
 In the `main.css`, first the root colours for the entire website are defined in
-CSS variables. This allows easy changes to the site's colourscheme through
+CSS variables. This allows easy changes to the site's colour scheme through
 simple variable changes rather than replacing every colour declaration.
 
 Furthermore, custom fonts used are defined at the root level. A single
 open-source font called 'Lilita One' was used.
+
+Then, the form component styles are defined. All form components are grey, with
+a small circular radius. The focus style is replaced by a black or white outline
+depending on the page background after following advice concerning focus
+indicators [@soueidanGuideDesigningAccessible2021]. Notably, the CSS defines an
+anchor tag that looks like a button to maintain semantic HTML with a intuitive
+appearance.
+
+The CSS layout was developed desktop-first and mobile-second. To achieve this,
+6 width-based breakpoints were defined. For familiarity, Bootstrap's breakpoints
+were used [@ottoBreakpoints2020]. Extra-small is below 576 pixels, small is to
+768 pixels, medium is to 992 pixels, large is to 1200 pixels, and extra large is
+to 1400 pixels, and extra extra large is over 1400 pixels. These breakpoints
+vary the width of the main layout, and size and location of images.
+
+The main page layout uses a Flexbox column display applied to a 100% height HTML
+`body`. Three elements are within the Flexbox `body`, the header, a `div` for
+the main content, and the footer. The `div` for the main content is set to grow,
+pushing the footer to the bottom of the page. This achieves a typical header,
+content, footer layout.
+
+The `div` containing the main content is a Flexblox containing a single `main`
+element. The Flexbox is a column based with center justified content, placing
+all the content in the middle of the screen. The width of the center content
+is changed by the breakpoint media queries.  Larger screen sizes use
+approximately 65% width; this adds border left and right of the content. However,
+smaller displays have 90% width, adding only a small amount of padding to
+account for the small screen size.
+
+Both the header and footer have similar columnar, center justified Flexboxes
+with the same widths. This ensures that the header and footer content align
+with the main content.
+
+Pages have individual rules for their content.
+
+The lower area of the banner uses its own style sheet called `supporters.css`.
+The style sheet contains CSS animations for the scrolling donation. CSS
+animations were used as the `marque` tag in favour of this method
+[@mdnMarqueeElementHTML2024]. The animation scrolls infinitely, looping every
+30 seconds.
 
 ### Reflection
 
