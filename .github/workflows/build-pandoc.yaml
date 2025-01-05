@@ -19,6 +19,7 @@ jobs:
               -t latex \
               --from markdown \
               --listings \
+              --toc \
               --citeproc \
               --bibliography=references.json \
               --template /.pandoc/templates/eisvogel.latex \
