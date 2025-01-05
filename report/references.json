@@ -49,6 +49,73 @@
     "URL": "https://www.svgrepo.com/svg/172049/animal-shelter"
   },
   {
+    "id": "bellMoreModernCSS2023",
+    "abstract": "I wrote “A Modern CSS Reset” almost 4 years ago and, yeh, it’s not aged overly well. I spotted it being linked up again a few days ago and thought it’s probably a good idea to publish an updated version.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          1,
+          5
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Bell",
+        "given": "Andy"
+      }
+    ],
+    "citation-key": "bellMoreModernCSS2023",
+    "container-title": "Piccalilli",
+    "issued": {
+      "date-parts": [
+        [
+          "2023",
+          9,
+          18
+        ]
+      ]
+    },
+    "language": "en",
+    "title": "A (more) Modern CSS Reset",
+    "type": "webpage",
+    "URL": "https://piccalil.li/blog/a-more-modern-css-reset/"
+  },
+  {
+    "id": "comeauModernCSSReset2024",
+    "abstract": "I have a set of baseline CSS styles that come with me from project to project. In the past, I'd use a typical CSS reset, but times have changed, and I believe I have a better set of global styles!",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          1,
+          5
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Comeau",
+        "given": "Josh W."
+      }
+    ],
+    "citation-key": "comeauModernCSSReset2024",
+    "issued": {
+      "date-parts": [
+        [
+          "2024",
+          11,
+          25
+        ]
+      ]
+    },
+    "language": "en",
+    "title": "A Modern CSS Reset",
+    "type": "webpage",
+    "URL": "https://www.joshwcomeau.com/css/custom-css-reset/"
+  },
+  {
     "id": "devaprasadFillingBankCheque2020",
     "abstract": "Banking, cheque, bank cheque, banking, signing, writing",
     "accessed": {
@@ -139,6 +206,30 @@
     "title": "Indoor Dog Parks to Take the Winter Chill Off",
     "type": "webpage",
     "URL": "https://www.bringfido.co.uk/blog/best-indoor-dog-parks/"
+  },
+  {
+    "id": "googleGoogleMaps",
+    "abstract": "Find local businesses, view maps and get driving directions in Google Maps.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          1,
+          5
+        ]
+      ]
+    },
+    "author": [
+      {
+        "literal": "Google"
+      }
+    ],
+    "citation-key": "googleGoogleMaps",
+    "container-title": "Google Maps",
+    "language": "en-GB",
+    "title": "Google Maps",
+    "type": "webpage",
+    "URL": "https://www.google.com/maps"
   },
   {
     "id": "jwdesignCatAnimalShelter2020",
@@ -234,6 +325,30 @@
     "URL": "https://freerangestock.com/photos/172759/tabby-cat-licking-its-paw-outdoor.html"
   },
   {
+    "id": "mayerCSSToolsReset",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          1,
+          5
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Mayer",
+        "given": "Eric"
+      }
+    ],
+    "citation-key": "mayerCSSToolsReset",
+    "language": "en",
+    "title": "CSS Tools: Reset CSS",
+    "title-short": "CSS Tools",
+    "type": "webpage",
+    "URL": "https://meyerweb.com/eric/tools/css/reset/"
+  },
+  {
     "id": "mcleodHowCarePet24",
     "abstract": "A leopard gecko makes a great pet because they are small, docile, and easy to care for. Here’s everything you need to know about leopard geckos.",
     "accessed": {
@@ -271,6 +386,32 @@
     "title": "How to Care for a Pet Leopard Gecko",
     "type": "webpage",
     "URL": "https://www.thesprucepets.com/leopard-geckos-1236911"
+  },
+  {
+    "id": "montoreanoLilitaOneFont",
+    "abstract": "Download Lilita One Font · Free for commercial use · Lilita One is a display typeface with a fat look, ideal for headlines and short texts. With a slightly condensed structure and some eye-catching detai",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          1,
+          5
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Montoreano",
+        "given": "Juan"
+      }
+    ],
+    "citation-key": "montoreanoLilitaOneFont",
+    "container-title": "1001 Fonts",
+    "language": "english",
+    "license": "SIL Open Font License (OFL)",
+    "title": "Lilita One Font",
+    "type": "webpage",
+    "URL": "https://www.1001fonts.com/lilita-one-font.html"
   },
   {
     "id": "operationkindnessJuneNationalAdopt2020",

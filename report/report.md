@@ -74,11 +74,11 @@ Mobile,
 
 [Website URL](localhost:8080)
 
-### Code Listings
+### PHP Page Listing
 
-The entire site is PHP,
+The entire site is PHP; therefore, the shown code listings are PHP-heavy files.
 
-#### index.php
+`index.php`,
 
 ```php
 <?php
@@ -150,101 +150,400 @@ The entire site is PHP,
 <html lang="en">
   <?php require $view; ?>
 </html>
+
 ```
 
-#### home.php
+`config.php`,
 
 ```php
 <?php
-  /**
-   * Included from index.php
-   * @var database $db
-   */
-
-  use data\database;
-
-  $title = "Preloved Pets - Home";
-  include __DIR__ . "/../private/head.php";
-?>
-<body>
-  <?php include __DIR__ . "/../private/header.php"; ?>
-  <div class="main-content">
-    <main>
-      <div class="sideways-banner">
-        <div class="sideways-banner-text">
-          <h1 class="main-title">Donate to give pets without owners a new family</h1>
-          <p class="main-title-subtitle">
-            Monthly donors get an exclusive newsletter and club area!
-          </p>
-          <a href="/donate" class="anchor-button large-anchor-button">Donate today</a>
-        </div>
-        <div class="sideways-banner-img">
-          <img src="/public/img/man-with-dog.jpg" alt="Man playing with a brown dog">
-        </div>
-      </div>
-      <div class="sideways-banner sideways-banner-reverse">
-        <div class="sideways-banner-text">
-          <h2 class="secondary-title">
-            We are a local charity that finds new, loving families for pets after their owners have died.
-          </h2>
-          <p class="main-title-subtitle">We currently accept cats, dogs, and rodents.</p>
-          <a href="/about-us" class="anchor-button large-anchor-button grey-anchor">About us</a>
-        </div>
-        <div class="sideways-banner-img">
-          <img src="/public/img/held-cat.jpg" alt="Member of staff holding an upside down cat">
-        </div>
-      </div>
-      <div class="sideways-banner">
-        <div class="sideways-banner-text">
-          <h2 class="secondary-title">Help us keep reptiles and fish</h2>
-          <p class="main-title-subtitle">
-            With <span class="bold-text">your</span> help, we want to expand to housing rodents, reptiles and fish in
-            need.
-          </p>
-          <a href="/donate" class="anchor-button large-anchor-button">Donate to our goal</a>
-        </div>
-        <div class="sideways-banner-img">
-          <img src="/public/img/fish.jpg" alt="Goldfish in aquarium">
-        </div>
-      </div>
-      <div>
-        <h2 class="secondary-title">Latest News</h2>
-        <div class="adjacent-articles">
-          <a href="/news" class="adjacent-article">
-            <div class="adjacent-article-title">
-              <h3>Large trust donation</h3>
-              <img src="/public/img/cheque-handover.jpg" alt="Person handing cheque to another person">
-            </div>
-            <p>We have received a £2,000 donation from a local charity trust to help continue housing more pets.</p>
-          </a>
-          <a href="/news" class="adjacent-article">
-            <div class="adjacent-article-title">
-              <h3>Update on reptile housing goal</h3>
-              <img src="/public/img/leopard-gecko.jpg" alt="Picture of a pet Leopard Gecko in a enclosure">
-            </div>
-            <p>Our reptile housing goal has progressed to 50% completion due to all of your support.</p>
-          </a>
-          <a href="/news" class="adjacent-article">
-            <div class="adjacent-article-title">
-              <h3>New pet area</h3>
-              <img src="/public/img/pet-area.jpg" alt="Picture of pet play area">
-            </div>
-            <p>
-              Due to your donations, we have installed a new internal pet area. This allows our staff to entertain
-              housed cats and dogs during bad, rainy conditions
-            </p>
-          </a>
-        </div>
-      </div>
-    </main>
-  </div>
-  <?php include __DIR__ . "/../private/footer.php"; ?>
-</body>
+  const DB_HOST = "db";
+  const DB_PORT = 3306;
+  const DB_NAME = "mysql";
+  const DB_USER = "root";
+  const DB_PASS = "admin";
+  const DB_SOCK = "/var/run/mysqld/mysqld.sock";
 ```
 
-<!-- TODO: Insert code listings at end -->
+`database.php`,
 
-### Images
+```php
+<?php
+  declare(strict_types=1);
+
+  namespace data;
+
+  use mysqli;
+
+  class database
+  {
+    private mysqli $conn;
+    private string $host;
+    private int $port;
+    private string $databaseName;
+    private string $user;
+    private string $password;
+    private string $sock;
+
+    public function __construct(string $host, string $name, int $port, string $user, string $password, string $sock)
+    {
+      $this->host = $host;
+      $this->databaseName = $name;
+      $this->port = $port;
+      $this->user = $user;
+      $this->password = $password;
+      $this->sock = $sock;
+    }
+
+    public function getConn(): mysqli
+    {
+      if (isset($this->conn)) {
+        return $this->conn;
+      }
+
+      $this->conn = new mysqli($this->host, $this->user, $this->password, $this->databaseName, $this->port, $this->sock);
+      if ($this->conn->connect_error) {
+        exit("Failed to connect to mysql database {$this->conn->connect_error}");
+      }
+      $this->conn->set_charset("utf8mb4");
+      return $this->conn;
+    }
+  }
+```
+
+`donation_repo.php`,
+
+```php
+<?php
+  declare(strict_types=1);
+
+  namespace data;
+
+  use model\donation;
+
+  require_once __DIR__ . "/database.php";
+  require_once __DIR__ . "/../models/donation.php";
+
+  class donation_repo
+  {
+    public database $database;
+
+    public function __construct(database $database)
+    {
+      $this->database = $database;
+    }
+
+    /**
+     * @return array<donation>
+     */
+    public function get_banner_donations(): array
+    {
+      $donation_types = $this->get_donation_types();
+      $conn = $this->database->getConn();
+      $result = $conn->query("
+        SELECT donation_id, 
+               donation_type_id, 
+               donator_name, 
+               donation_email, 
+               donation_amount, 
+               donation_message,
+               comm_preference,
+               show_billboard
+        FROM public.donation
+        WHERE show_billboard = 1    
+        LIMIT 20"
+      );
+      $rows = $result->fetch_all(MYSQLI_ASSOC);
+      /** @var array<donation> $donations */
+      $donations = array();
+      foreach ($rows as $row) {
+        $new_donation = new donation(
+          intval($row["donation_id"]),
+          $donation_types[intval($row["donation_type_id"])],
+          $row["donator_name"],
+          $row["donation_email"],
+          floatval($row["donation_amount"]),
+          $row["donation_message"],
+          $row["comm_preference"],
+          boolval($row["show_billboard"])
+        );
+        $donations[] = $new_donation;
+      }
+      return $donations;
+    }
+
+    /**
+     * @return array<int,string>
+     */
+    public function get_donation_types(): array
+    {
+      $conn = $this->database->getConn();
+      $result = $conn->query("
+        SELECT donation_type_id, donation_type
+        FROM public.donation_type"
+      );
+      $rows = $result->fetch_all(MYSQLI_ASSOC);
+      /** @var array<int, string> $donation_types */
+      $donation_types = array();
+      foreach ($rows as $row) {
+        $donation_types[$row["donation_type_id"]] = $row["donation_type"];
+      }
+      return $donation_types;
+    }
+
+    public function add_donation(donation $donation): bool
+    {
+      $conn = $this->database->getConn();
+      switch ($donation->donationType) {
+        case "monthly":
+          $donation_type_id = 1;
+          break;
+        case "will":
+          $donation_type_id = 3;
+          break;
+        case "one-time":
+        default:
+          $donation_type_id = 2;
+          break;
+      }
+
+      $sql = $conn->prepare("
+        INSERT INTO public.donation
+            (donation_type_id, donator_name, donation_email, donation_amount, donation_message, comm_preference, show_billboard)
+        VALUES (?, ?, ?, ?, ?, ?, ?);"
+      );
+      // Convert to int before passing to database
+      $show_billboard_int = intval($donation->showBillboard);
+      $sql->bind_param("issdssi",
+        $donation_type_id,
+        $donation->donationName,
+        $donation->donationEmail,
+        $donation->donationAmount,
+        $donation->donationMessage,
+        $donation->commPreference,
+        $show_billboard_int
+      );
+
+      return $sql->execute();
+    }
+
+    /**
+     * @param string $email
+     * @return donation|null
+     */
+    public function in_supporters_club(string $email): ?donation
+    {
+      $conn = $this->database->getConn();
+      $sql = $conn->prepare("
+        SELECT donation_id, 
+               donation_type_id, 
+               donator_name,
+               donation_email, 
+               donation_amount, 
+               donation_message,
+               comm_preference,
+               show_billboard
+        FROM public.donation WHERE donation_email = ?"
+      );
+      $sql->bind_param("s", $email);
+      $sql->execute();
+
+      $result = $sql->get_result();
+      $rows = $result->fetch_all(MYSQLI_ASSOC);
+
+      if (count($rows) < 1) {
+        return null;
+      }
+
+      $row = $rows[0];
+      return new donation(
+        intval($row["donation_id"]),
+        $row["donation_type_id"] == 1 ? "monthly" : "one_off",
+        $row["donator_name"],
+        $row["donation_email"],
+        floatval($row["donation_amount"]),
+        $row["donation_message"],
+        $row["comm_preference"],
+        boolval($row["show_billboard"])
+      );
+    }
+
+    public function update_donation(int $donation_id, string $donation_name, string $donation_email, string $comm_preference): bool
+    {
+      $conn = $this->database->getConn();
+      $sql = $conn->prepare("
+        UPDATE public.donation SET 
+          donator_name = ?,
+          donation_email = ?,
+          comm_preference = ?
+        WHERE donation_id = ?"
+      );
+      $sql->bind_param("sssi", $donation_name, $donation_email, $comm_preference, $donation_id);
+      return $sql->execute();
+    }
+  }
+```
+
+`pet_repo.php`,
+
+```php
+<?php
+  declare(strict_types=1);
+
+  namespace data;
+
+  use model\pet;
+
+  require_once __DIR__ . "/database.php";
+  require_once __DIR__ . "/../models/pet.php";
+
+  class pet_repo
+  {
+    public database $database;
+
+    /**
+     * @param database $database
+     */
+    public function __construct(database $database)
+    {
+      $this->database = $database;
+    }
+
+    /**
+     * @return array<pet>
+     */
+    public function get_pets(): array
+    {
+      $pet_types = $this->get_pet_types();
+      $conn = $this->database->getConn();
+      $result = $conn->query("
+        SELECT pet_id,
+               pet_type_id,
+               pet_name,
+               pet_description,
+               previous_owners,
+               pet_weight,
+               pet_colour,
+               image_path
+        FROM public.pet
+        LIMIT 20;"
+      );
+      $rows = $result->fetch_all(MYSQLI_ASSOC);
+      /** @var array<pet> $pets */
+      $pets = array();
+      foreach ($rows as $row) {
+        $new_pet = new pet(
+          intval($row["pet_id"]),
+          $pet_types[intval($row["pet_type_id"])],
+          $row["pet_name"],
+          $row["pet_description"],
+          intval($row["previous_owners"]),
+          floatval($row["pet_weight"]),
+          $row["pet_colour"],
+          $row["image_path"]
+        );
+        $pets[] = $new_pet;
+      }
+      return $pets;
+    }
+
+    /**
+     * @return array<int, string>
+     */
+    private function get_pet_types(): array
+    {
+      $conn = $this->database->getConn();
+      $result = $conn->query("
+        SELECT pet_type_id,
+               pet_type
+        FROM public.pet_type"
+      );
+      $rows = $result->fetch_all(MYSQLI_ASSOC);
+      /** @var array<int, string> $pet_types */
+      $pet_types = array();
+      foreach ($rows as $row) {
+        $pet_types[$row["pet_type_id"]] = $row["pet_type"];
+      }
+      return $pet_types;
+    }
+  }
+```
+
+`donation_controller.php`,
+
+```php
+<?php
+  declare(strict_types=1);
+
+  namespace controllers;
+
+  require_once __DIR__ . "/../data/donation_repo.php";
+
+  use data\database;
+  use data\donation_repo;
+  use Exception;
+  use model\donation;
+
+  class donation_controller
+  {
+    private donation_repo $donation_repo;
+
+    /**
+     * @param database $db
+     */
+    public function __construct(database $db)
+    {
+      $this->donation_repo = new donation_repo($db);
+    }
+
+    function submit_donation(): bool
+    {
+      // Check that form data is in session storage
+      if (!isset(
+        $_SESSION["donation-type"],
+        $_SESSION["donator-name"],
+        $_SESSION["donator-email"],
+        $_SESSION["donation-amount"],
+        $_SESSION["donation-message"],
+        $_SESSION["comm-preference"],
+        $_SESSION["show-billboard"]
+      )) {
+        throw new Exception("Form data incomplete");
+      }
+      $new_donation = new donation(
+        null,
+        $_SESSION["donation-type"],
+        $_SESSION["donator-name"],
+        $_SESSION["donator-email"],
+        floatval($_SESSION["donation-amount"]),
+        $_SESSION["donation-message"],
+        $_SESSION["comm-preference"],
+        boolval(["show-billboard"])
+      );
+      return $this->donation_repo->add_donation($new_donation);
+    }
+
+    function is_supporters_member(string $email): ?donation
+    {
+      $in_supporters_club = $this->donation_repo->in_supporters_club($email);
+      if (isset($in_supporters_club)) {
+        $_SESSION["supporter_details"] = $in_supporters_club;
+      }
+      return $in_supporters_club;
+    }
+
+    function update_donation(int $donation_id, string $donation_name, string $donation_email, string $comm_preference): bool
+    {
+      return $this->donation_repo->update_donation($donation_id, $donation_name, $donation_email, $comm_preference);
+    }
+  }
+```
+
+### Media Sources
+
+Fonts used:
+
+- Lilita One Font [@montoreanoLilitaOneFont]
 
 Images used:
 
@@ -287,5 +586,845 @@ Images used:
       - Include the asset in email marketing, mobile advertising, or a broadcast or digital program if the expected number of viewers is fewer than 500,000.
       - Post the asset to a website or social media site with no limitation on views.
   - Our staff [@andresrDogVetStock2014]
+  
+Embeds used:
 
-### Bibliography and Usages
+- Google Maps iframe [@googleGoogleMaps]
+  - SIL Open Font License (OFL)
+
+### Validation Report
+
+<!-- TODO: Add views -->
+
+#### Cascading Style Sheets
+
+`reset.css`,
+
+```css
+/*
+ * CSS Reset: Prevents browsers displaying their in-built styles. This ensures
+ * the website looks the same over different web engines
+ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins */
+* {
+  margin: 0;
+}
+
+/* Text rendering, line height accessibility */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default
+ * styling will be removed
+ */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults
+ * body {
+ *   min-height: 100vh;
+ *   line-height: 1.5;
+ * }
+ */
+
+/* Set shorter line heights on headings and interactive elements
+ * h1, h2, h3, h4,
+ * button, input, label {
+ *   line-height: 1.1;
+ * }
+ */
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* Improve line wrapping on normal text */
+p {
+  text-wrap: pretty;
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* A elements that don't have a class get default styles */
+/*a:not([class]) {*/
+/*    text-decoration-skip-ink: auto;*/
+/*    color: currentColor;*/
+/*}*/
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Remove fieldset border */
+fieldset {
+  border-width: 0;
+  padding: 0;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+```
+
+![Successful validation report for reset.css](images/validation/reset-css.png)
+
+`main.css`,
+
+```css
+/* Colours
+ * Define colour variables to reuse across website
+ */
+:root {
+  --main-bg-colour: #fcfcfc;
+  --sec-bg-colour: #e8e8e8;
+  --grey: #d7d7d7;
+  --mid-grey: #969696;
+  --focus: #212121;
+  --timberwolf: #dad7cdff;
+  --sage: #a3b18aff;
+  --fern-green: #588157ff;
+  --hunter-green: #3a5a40ff;
+  --brunswick-green: #344e41ff;
+  --link: #1d70b8;
+  --link-hov: #003078;
+}
+
+/* Custom fonts used */
+@font-face {
+  font-family: 'Lilita One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(LilitaOne-Regular.ttf);
+}
+
+/* Standard Components */
+/* Form components */
+input,
+textarea {
+  display: block;
+  background-color: var(--grey);
+  border: 2px solid var(--mid-grey);
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  display: inline-block;
+  border: 2px solid black;
+  color: black;
+}
+
+input[type=radio]:focus-visible {
+  outline: 2px solid black;
+  box-shadow: none;
+}
+
+button {
+  background-color: var(--sec-bg-colour);
+  border: 2px solid var(--grey);
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+}
+
+button[type=submit] {
+  color: black;
+  background-color: var(--sage);
+  border-color: var(--focus);
+}
+
+button:hover,
+input:hover {
+  filter: brightness(0.9);
+}
+
+button:active {
+  background-color: var(--fern-green);
+  border: 2px solid var(--hunter-green);
+  color: white;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid white;
+  box-shadow: 0 0 0 5px var(--focus);
+}
+
+/* Form items */
+form {
+  background-color: var(--sec-bg-colour);
+  padding: 1.5rem 1.5rem;
+}
+
+fieldset legend {
+  font-weight: 600;
+}
+
+/* Transparent form for single input purposes */
+form.hidden-form {
+  background-color: transparent;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.form-required {
+  color: darkred;
+}
+
+/* Anchor tags */
+a:visited {
+  color: #6a17b9;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hov);
+  text-decoration-thickness: 2px;
+}
+
+/* Anchor tags that look like buttons */
+a.anchor-button {
+  display: inline-block;
+  border: 2px solid var(--fern-green);
+  padding: 0.15rem 0.8rem;
+  border-radius: 5px;
+  background-color: var(--brunswick-green);
+  color: var(--grey);
+}
+
+a.large-anchor-button {
+  padding: 0.5rem 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration-line: none;
+}
+
+a.grey-anchor {
+  background-color: var(--timberwolf);
+  color: var(--focus);
+  border-color: var(--mid-grey);
+}
+
+a.grey-anchor:hover {
+  filter: brightness(1.1);
+}
+
+/* Table components */
+table {
+  text-align: left;
+  vertical-align: top;
+  border: 2px solid var(--focus);
+  border-collapse: collapse;
+}
+
+table caption {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+thead {
+  background-color: var(--sage);
+}
+
+tbody {
+  background-color: var(--sec-bg-colour);
+}
+
+th,
+td {
+  padding: 0.5rem;
+  font-weight: 400;
+  border: 2px solid var(--focus);
+}
+
+th[scope=row] {
+  font-weight: 700;
+}
+
+/* Utility rules */
+.hidden-text {
+  display: none;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.inset-text {
+  border-left: 4px solid var(--grey);
+  padding-left: 15px;
+}
+
+/* Add margin to standard text */
+/* Using main avoids affecting CSS in header and footers */
+main p,
+main h2 {
+  margin-bottom: 1rem;
+}
+
+/*
+ * Layout of all pages
+ */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--main-bg-colour);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-content>main {
+  margin: 2rem 0;
+  /*flex: 1 0;*/
+}
+
+main h1 {
+  margin-bottom: 1rem;
+}
+
+/* Header layout */
+header.top-header {
+  background-color: var(--hunter-green);
+}
+
+.header-content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+/* Links on header */
+.header-links {
+  width: 100%;
+  align-items: flex-end;
+}
+
+.header-logo a {
+  display: flex;
+  align-items: center;
+  color: var(--sec-bg-colour);
+  text-decoration-line: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 1rem;
+  column-gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+/* Pushes links after to right side of header */
+.right-nav-links {
+  margin-right: auto;
+}
+
+.header-content a {
+  color: var(--sec-bg-colour);
+  text-decoration-line: none;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.header-content a:hover,
+.anchor-button:hover {
+  filter: brightness(1.25);
+}
+
+/* Footer layout */
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-top: 3px solid var(--sage);
+  background-color: var(--hunter-green);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+div.footer-content * {
+  color: var(--sec-bg-colour);
+}
+
+.footer-content-logo {
+  flex: 0 0 64px;
+}
+
+.footer-content-links>*:not(:last-child) {
+  margin-right: auto;
+}
+
+.footer-content-links {
+  display: flex;
+  flex: 2 1 auto;
+  flex-flow: row wrap;
+  row-gap: 1.25rem
+}
+
+.social-media-link {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
+}
+
+/* Donation banner */
+.donation-alerts {
+  overflow: hidden;
+  background-color: var(--sage);
+  padding: 0.3rem 0;
+}
+
+/* Set donation banner text colour */
+.donation-alerts * {
+  color: var(--focus);
+}
+
+/* Donation form page */
+.donation-form label {
+  display: block;
+}
+
+.donation-form>*,
+.donation-form fieldset>* {
+  margin: 0.5rem 0;
+}
+
+.donation-form input,
+.donation-form textarea {
+  margin: 0.25rem 0;
+}
+
+.donation-form textarea {
+  width: 14rem;
+}
+
+.donation-type {
+  font-weight: normal;
+}
+
+/* Pets page */
+ul.list-pets {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  row-gap: 2rem;
+  /*column-gap: 2rem;*/
+  list-style: none;
+  padding: 0;
+}
+
+ul.list-pets li {
+  display: flex;
+  flex-flow: nowrap column;
+  max-width: calc(50% - 2rem);
+  /*margin: 1rem;*/
+  padding: 1rem;
+  border: var(--focus) 2px solid;
+}
+
+ul.list-pets li>* {
+  margin: 0.25rem 0;
+}
+
+ul.list-pets li>table {
+  margin-bottom: 0.75rem;
+}
+
+ul.list-pets li>a.anchor-button {
+  margin-top: auto;
+}
+
+.pet-title-image {
+  display: flex;
+  flex-flow: nowrap column-reverse;
+  row-gap: 0.5rem;
+}
+
+.pet-title-image h2 {
+  margin: 0;
+}
+
+.pet-details {
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+}
+
+.pet-details tbody {
+  background-color: transparent;
+}
+
+.pet-details th,
+.pet-details td {
+  width: 50%;
+}
+
+/* Contact us page */
+.contact-us {
+  margin: 1rem 0;
+}
+
+.contact-us>h2 {
+  margin-bottom: 0.5rem;
+}
+
+.google-maps-embed {
+  margin: 1rem 0;
+}
+
+.google-maps-embed iframe {
+  max-width: 280px;
+}
+
+.google-maps-embed p {
+  margin: 0.5rem 0;
+}
+
+/* About us page */
+.about-us h3 {
+  margin-bottom: 1rem;
+}
+
+.center-img {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  text-align: center;
+}
+
+/* News page */
+.news-article {
+  background-color: var(--sec-bg-colour);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.news-article-img {
+  display: flex;
+  justify-content: center;
+}
+
+.news-article-img img {
+  width: 100%;
+}
+
+/* Home page */
+.main-title {
+  font-family: "Lilita One", serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: var(--focus);
+}
+
+.main-title-subtitle {
+  font-size: 1.5rem;
+  color: var(--focus);
+}
+
+.secondary-title {
+  font-family: "Lilita One", serif;
+  font-size: 2.5rem;
+  color: var(--focus);
+}
+
+/* Top to bottom banner */
+.reverse-header-img {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  row-gap: 1rem;
+}
+
+.top-banner-img {
+  width: 50%;
+}
+
+/* Side to side banner */
+.sideways-banner {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  margin-bottom: 3rem;
+  column-gap: 2rem;
+}
+
+.sideways-banner-reverse {
+  flex-direction: row-reverse;
+}
+
+.sideways-banner-text {
+  width: calc(50% - 2rem);
+  flex: 1 0 auto;
+}
+
+.sideways-banner-text>h1 {
+  margin-bottom: 0.5rem;
+}
+
+.sideways-banner-text>p {
+  margin-bottom: 2rem;
+}
+
+.sideways-banner-img {
+  width: 100%
+}
+
+/* Side by side articles */
+.adjacent-articles {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.adjacent-article-title {
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  row-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.adjacent-article {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--sec-bg-colour);
+}
+
+.adjacent-article {
+  color: black;
+  text-decoration-line: none;
+}
+
+.adjacent-article:visited {
+  color: inherit;
+}
+
+/*
+ * Media query breakpoints for responsive design
+ * Using the default bootstrap endpoint sizes as these are most common
+ */
+
+/* Extra small */
+@media only screen and (max-width: 576px) {
+
+  .main-content>main,
+  .header-content,
+  .footer-content {
+    width: 90%;
+  }
+
+  ul.list-pets li {
+    max-width: 100%;
+  }
+
+  .top-banner-img {
+    width: 100%;
+  }
+}
+
+/* Small */
+@media screen and (min-width: 576px) {
+
+  .main-content>main,
+  .header-content,
+  .footer-content {
+    width: 80%;
+  }
+
+  .google-maps-embed iframe {
+    max-width: 600px;
+  }
+}
+
+/* Medium */
+@media screen and (min-width: 768px) {
+
+  .main-content>main,
+  .header-content,
+  .footer-content {
+    width: 75%;
+  }
+
+  .sideways-banner-img {
+    max-width: calc(50% - 2rem);
+  }
+
+  .adjacent-article {
+    width: calc(33.33% - 2rem);
+  }
+}
+
+/* Large */
+@media screen and (min-width: 992px) {
+
+  .main-content>main,
+  .header-content,
+  .footer-content {
+    width: 70%;
+  }
+}
+
+/* Extra Large */
+@media screen and (min-width: 1200px) {
+
+  .main-content>main,
+  .header-content,
+  .footer-content {
+    width: 65%;
+  }
+
+  .news-article-img img {
+    width: 50%;
+  }
+}
+
+/* Extra extra large */
+@media screen and (min-width: 1400px) {
+
+  .main-content>main,
+  .header-content,
+  .footer-content {
+    width: 60%;
+  }
+}
+```
+
+![Successful validation report for main.css](images/validation/main-css.png)
+
+`donations.css`,
+
+```css
+/*
+ * Animations for donation scrolling
+ * Stored separately as it involves keyframes
+ */
+
+/* Scrolling donation text */
+.scroll-text {
+  text-align: right;
+  animation: scroll-animation 30s linear infinite;
+  animation-iteration-count: infinite;
+  text-overflow: clip;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.scroll-text-donation:nth-child(odd) {
+  margin-right: 3rem;
+}
+
+.scroll-text-donation:nth-child(even) {
+  margin-right: 8rem;
+}
+
+
+@keyframes scroll-animation {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+```
+
+![Successful validation report for donation.css](images/validation/donations-css.png)
+
+### Cascading Style Sheets Explanation
+
+The `reset.css` file aims overwrite default browser styles to a default,
+unopinionated, neutral state. Different browsers have distinct presentation defaults;
+Gecko (Firefox), Safari, and Chromium based browsers all present pages differently,
+resulting in an inconsistent experience across browsers. Therefore, a CSS reset
+style sheet is used to standardise the presentation across browser families,
+providing a starting point for CSS styling [@mayerCSSToolsReset]. The CSS reset used
+is an edited combination of 2 style sheets, 'A Modern CSS Reset'
+[@comeauModernCSSReset2024] and 'A (more) Modern CSS Reset' [-@bellMoreModernCSS2023].
+Unnecessary rules were removed, comments were added, and rules were modified.
+
+`main.css`,
+
+In the `main.css`, first the root colours for the entire website are defined in
+CSS variables. This allows easy changes to the site's colourscheme through
+simple variable changes rather than replacing every colour declaration.
+
+Furthermore, custom fonts used are defined at the root level. A single
+open-source font called 'Lilita One' was used.
+
+### Reflection
+
+## Bibliography and Usages
