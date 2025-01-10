@@ -18,6 +18,53 @@ nocite: |
 
 ### The Objectives
 
+Preloved Pets is a local charity that finds new homes for pets after their
+owners death. Currently they advertise rehousing in the local news paper, shops,
+and radio station. The charity is self-funded with income from, wills, one-off
+donations, and a charity subscription to a 'supporters club'.
+
+Therefore, the main goal of the site is to advertise new homes for pets; this
+is Preloved Pets reason for existence. Advertising pets in radio stations
+and shops does not provide a permanent, updated catalogue of pets. Radio stations
+may only advertise few times a day, and shop and newspaper issues quickly become
+outdated. However, a website provides advertising managed entirely by Preloved Pets.
+This introduces several benefits: content can be as long as desired, newspapers
+and radio stations have limited page sizes and schedules respectively;
+the content can be updated at will, and thus never outdated; and a website's
+footfall and audience can be far greater.
+
+This goal will be measured through two metrics. First, website visits,
+Preloved Pets must know if people are aware of the website's existence and are
+visiting it. This goal can be used to make adjustments to advertising and
+awareness.  Since Preloved Pets is only a  local charity, this goal will be
+successful if the website reaches 600 unique visitors in the first two months.
+Another metric is  percentage of pet adoptions performed through the website;
+this is expected to  increase steadily as website footfall increases. This
+metric's goal is for website initiated adoptions to become the second most
+popular scenario, below in-person visits, but above telephone scenarios.
+
+As Preloved Pets is self-funded, the secondary goal is to increase donations by
+accepting donations from Preloved Pets website. Donating in-person, or over
+the telephone requires either commuting, or a lengthy process of reading
+card numbers; however, internet donations are quick and easy, reducing the
+barrier to donation, which should increase the number of donations received.
+Furthermore, the website expands Preloved Pets' audience outside of the local
+area, further increasing donations.
+
+This goal can be measured through several metrics. The first metric is the total
+donation amount. The amount of donations is expected to increase as donating
+becomes more accessible. The second metric is the percentage of donations taken
+through Preloved Pets' website. Over time, web donation should become one of
+the biggest methods; an good goal would be over 30%. Finally, to gauge the
+donation form's accessibility, the number of users who visit the donation page,
+and the amount of users who then submit the form will be measured.
+This can measure people's interest in donating, and how effective the form is.
+
+The long term goal of the project is the creation of the reptile and fish
+enclosures. The website can be used to highlight progress, donation goals,
+and incentives. The goal has two success criteria: completion of the reptile
+area, and completion of the fish area.
+
 ### The Target Audience
 
 ### Personality and Tone
