@@ -6,6 +6,7 @@ lang: "en"
 titlepage: true
 toc-own-page: true
 table-use-row-colors: true
+block-headings: true
 colorlinks: true
 bibliography: "references.bib"
 csl: "university-of-south-wales-harvard.csl"
@@ -38,9 +39,9 @@ Preloved Pets must know if people are aware of the website's existence and are
 visiting it. This goal can be used to make adjustments to advertising and
 awareness.  Since Preloved Pets is only a  local charity, this goal will be
 successful if the website reaches 600 unique visitors in the first two months.
-Another metric is  percentage of pet adoptions performed through the website;
+Another metric is  percentage of pet rehomings performed through the website;
 this is expected to  increase steadily as website footfall increases. This
-metric's goal is for website initiated adoptions to become the second most
+metric's goal is for website initiated rehomings to become the second most
 popular scenario, below in-person visits, but above telephone scenarios.
 
 As Preloved Pets is self-funded, the secondary goal is to increase donations by
@@ -67,47 +68,116 @@ area, and completion of the fish area.
 
 ### The Target Audience
 
+#### Key User Groups
+
+Preloved Pets has several key user groups separated by their goals, behaviours,
+and attitudes to the charity. The user groups and personas are created through
+the informal modelling process.
+
+The first and primary key user group is the 'person looking to rehome a pet'.
+Their goal is to rehome a pet. This group has a long usage cycle and can morph
+into other key user groups. The group initially starts looking for pet over a
+prolonged time investigating available pets in detail and eventually rehoming
+them. At this point they either cease being a user of Preloved Pets, become a
+supporters club member, or charitable donor of Preloved Pets if a good
+experience is provided.
+
+![A rehomer becoming a charitable donor or supporters club member over time](images/change-over-time-relationship.drawio.png)
+
+The secondary key user group are charitable donors as contribute to Preloved Pets'
+funds. These users are required for continued operation. The charitable donors
+goal is to donate to Preloved Pets. This user may have been a pet lover, or
+a rehomer, or simply a charitable person.
+
+The donor gifting their will is a distinct user group. Their goal is to gift
+a (portion) of their will to Preloved Pets. They are separate to
+charitable donors due to the nature of the donation. This user group may be an
+older demographic, which should be considered in the website's design and tone
+
+![Charitable donor becoming a will donor over time](images/change-over-time-relationship-2.drawio.png)
+
+The final key user group is supporters club member. The supporters club member
+is a subset of charitable donor. However, their goals are slightly different.
+The club members want to donate to access the club and view the special magazine.
+They are regular users of the site.
+
+![2x2 key user group summary view](images/key-user-groups.drawio.png)
+
 ### Personality and Tone
 
-### Wireflows
+#### Wireframes
 
-#### Donation wireflows
+Homepage,
 
-Desktop,
+![Desktop homepage](images/wireframes/desktop-home-page.png)
+
+![Mobile homepage](images/wireframes/mobile-homepage.png)
+
+Donation page,
+
+![Desktop donation page](images/wireframes/desktop-home-page.png)
+
+![Mobile donation page](images/wireframes/mobile-homepage.png)
+
+Pets page,
+
+![Desktop page](images/wireframes/desktop-pets.png)
+
+![Mobile page](images/wireframes/mobile-pets.png)
+
+News page,
+
+![Desktop news page](images/wireframes/desktop-news.png)
+
+![Mobile news page](images/wireframes/mobile-news.png)
+
+Contact us page,
+
+![Desktop contact us page ](images/wireframes/desktop-contact-us.png)
+
+![Mobile contact us page ](images/wireframes/mobile-contact-us.png)
+
+About us page,
+
+![Desktop about us page ](images/wireframes/desktop-about-us.png)
+
+![Mobile about us page ](images/wireframes/mobile-about-us.png)
+
+Supporter club sign in page,
+
+![Desktop sign in page ](images/wireframes/desktop-sign-in.png)
+
+![Mobile sign in page ](images/wireframes/mobile-sign-in.png)
+
+Supporters club home page,
+
+![Desktop supporters club home page](images/wireframes/desktop-supporters-home.png)
+
+![Mobile supporters club home page](images/wireframes/mobile-supporters-home.png)
+
+#### Wireflows - Storyboards
+
+##### Donation wireflows
 
 ![Desktop donation wireflow](images/wireframes/flows/desktop-donation-flow.png)
 
-Mobile,
-
 ![Mobile donation wireflow](images/wireframes/flows/mobile-donation-flow.png)
 
-#### Adopt pet flow
+##### Rehome pet flow
 
-Desktop,
+![Desktop rehome wireflow](images/wireframes/flows/desktop-adopt-pet-flow.png)
 
-![Desktop adoption wireflow](images/wireframes/flows/desktop-adopt-pet-flow.png)
+![Mobile rehome wireflow](images/wireframes/flows/mobile-adopt-pet-flow.png)
 
-Mobile,
-
-![Mobile adoption wireflow](images/wireframes/flows/mobile-adopt-pet-flow.png)
-
-#### Sign in flow
-
-Desktop,
+##### Sign in flow
 
 ![Desktop sign in wireflow](images/wireframes/flows/desktop-sign-in-flow.png)
 
-Mobile,
-
 ![Mobile sign in wireflow](images/wireframes/flows/mobile-sign-in-flow.png)
 
-#### Update supporter account details flow
-
-Desktop,
+##### Update supporter account details flow
 
 ![Desktop update supporter account details](images/wireframes/flows/desktop-update-details-flow.png)
-
-Mobile,
 
 ![Mobile update supporter account details](images/wireframes/flows/mobile-update-deatils-flow.png)
 
