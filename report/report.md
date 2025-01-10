@@ -545,56 +545,66 @@ Fonts used:
 
 - Lilita One Font [@montoreanoLilitaOneFont]
 
-Images used:
+Banner and footer:
 
 - Preloved Pets logo [@AnimalShelterVector]
   - CC0
-- Contact us
-  - X icon [@simpleiconscontributorsSimpleIcons]
-    - CCO
-  - Instagram icon [@simpleiconscontributorsSimpleIcons]
-    - CC0
-  - YouTube icon [@simpleiconscontributorsSimpleIcons]
-    - CC0
-  - Facebook icon [@simpleiconscontributorsSimpleIcons]
-    - CC0
-- Pets page
-  - Gwen image [@falconerShelteringTimeCoronavirus]
-  - Lulu image [@kreuzschnabelEnglishDogSitting2016]
-    - Free Art License 1.3
-  - Cat image [@operationkindnessJuneNationalAdopt2020]
-  - Rodent image [@PhotoNikolettEmmert2024]
-    - Pexels licence
-      - All photos and videos on Pexels are free to use.
-- Home
-  - Dog image [@pxherePxhereImage934965]
-    - CC0
-  - Staff holding cat [@jwdesignCatAnimalShelter2020]
-  - Fish [@tdesignsGoldfishLionHead2017]
-    - Pixababy licence
-      - Use Content for free
-- News:
-  - News article [@devaprasadFillingBankCheque2020]
-    - CC0
-  - News article [@mcleodHowCarePet24]
-  - News article [@francisIndoorDogParks2022]
-- About us
-  - Cat in about us [@liveseyFreeStockPhoto]
-    - CC0
-  - Our founder [@tan4ikkVetDogCat]
-    - Adobe Standard licence
-      - Include the asset in email marketing, mobile advertising, or a broadcast
-        or digital program if the expected number of viewers is fewer than
-        500,000.
-      - Post the asset to a website or social media site with no limitation on
-        views.
-  - Our staff [@andresrDogVetStock2014]
   
-Embedded elements used:
+Contact us page and footer:
+
+- X icon [@simpleiconscontributorsSimpleIcons]
+  - CCO
+- Instagram icon [@simpleiconscontributorsSimpleIcons]
+  - CC0
+- YouTube icon [@simpleiconscontributorsSimpleIcons]
+  - CC0
+- Facebook icon [@simpleiconscontributorsSimpleIcons]
+  - CC0
+  
+Embedded elements used in contact us:
 
 - Google Maps iframe [@googleGoogleMaps]
   - SIL Open Font License (OFL)
 
+Pets page:
+
+- Gwen image [@falconerShelteringTimeCoronavirus]
+- Lulu image [@kreuzschnabelEnglishDogSitting2016]
+  - Free Art License 1.3
+- Sid image [@operationkindnessJuneNationalAdopt2020]
+- Rodent image [@PhotoNikolettEmmert2024]
+  - Pexels licence
+    - All photos and videos on Pexels are free to use.
+
+Home page:
+
+- Dog image [@pxherePxhereImage934965]
+  - CC0
+- Staff holding cat [@jwdesignCatAnimalShelter2020]
+- Fish [@tdesignsGoldfishLionHead2017]
+  - Pixababy licence
+    - Use Content for free
+
+News page:
+
+- News article [@devaprasadFillingBankCheque2020]
+  - CC0
+- News article [@mcleodHowCarePet24]
+- News article [@francisIndoorDogParks2022]
+
+About us page:
+
+- Cat in about us [@liveseyFreeStockPhoto]
+  - CC0
+- Our founder [@tan4ikkVetDogCat]
+  - Adobe Standard licence
+    - Include the asset in email marketing, mobile advertising, or a broadcast
+        or digital program if the expected number of viewers is fewer than
+        500,000.
+    - Post the asset to a website or social media site with no limitation on
+      views.
+- Our staff [@andresrDogVetStock2014]
+  
 ### Validation Report
 
 <!-- TODO: Add views -->
