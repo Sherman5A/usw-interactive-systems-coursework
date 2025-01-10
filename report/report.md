@@ -103,6 +103,168 @@ They are regular users of the site.
 
 ![2x2 key user group summary view](images/key-user-groups.drawio.png)
 
+#### Personas
+
+Summary view
+
+----------------------------------------------------------------------------------------------------------
+Details           Primary persona
+----------------- ----------------------------------------------------------------------------------------
+Image             ![Image of Rhys Thomas](images/rhys-thomas.jpg){ width=35% }
+
+Name              Rhys Thomas
+
+Age               35
+
+Location          Porthcawl, Bridgend
+
+Occupation        Self-employed electrician
+
+Life stage        Married with 2 children
+
+Description       Rhys is self-employed electrician with a house and fostering family. In his early 20s
+                  he married and now has 2 children, aged 6 and 7. He wants what is best for his family.
+                  Since he is self-employed with children, he lacks time and a busy schedule.
+
+Owns pets         No
+
+Digital literacy  Rhys owns a phone, and a laptop he uses for his electrical business. He has basic IT
+                  skills in Microsoft Office that he uses for his business.
+
+Web usage         Rhys uses E-commerce regularly and checks the news when he has time.
+
+Trigger           Rhys's children have been desperate for a pet dog over the past year. However,
+                  he is worried it might be a fad for his children.
+
+Goal              Rhys wants to get a pet dog for his children in a quick, no-nonsense manner
+----------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------
+Details           Secondary persona
+----------------- ----------------------------------------------------------------------------------------
+Image             ![Image of Dafydd Jones](images/dafydd-jones.jpg){ width=35% }
+
+Name              Dafydd Jones
+
+Age               40
+
+Location          Pyle, Bridgend
+
+Occupation        Asda Manager
+
+Life stage        Single with no children
+
+Description       Dafydd is self-employed electrician with a house and fostering family. In his early 20s
+                  he married and now has 2 children, aged 6 and 7. He wants what is best for his family.
+                  Since he is self-employed with children, he lacks time and a busy schedule.
+
+Owns pets         1 cat
+
+Digital literacy  Dafydd only owns a phone. He has not used a desktop computer since school.
+
+Web usage         Dafydd uses social media on his phone regularly.
+
+Trigger           Dafydd was driving to work when he heard a radio advertisement about Preloved Pets.
+                  Dafydd loves his cat and other pets so he decided to make a one-off donation of £10 to
+                  Preloved Pets
+
+Goal              Dafydd wants to make a one-off donation to Preloved Pets
+----------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------
+Details
+----------------- ----------------------------------------------------------------------------------------
+Image             ![Image of Dafydd Jones](images/ieuan-tomos.jpg){ width=40% }
+
+Name              Ieuan Tomos
+
+Age               81
+
+Location          Cornelly, Bridgend
+
+Occupation        Retired
+
+Life stage        Married with 3 children and 5 grandchildren
+
+Description       Ieuan is an 81 year old pensioner. Ieuan and his wife remain fiercyly independent, and very
+                  active within the communicty despite their age. He started work in Port Talbot Steelworks,
+                  but then worked as a Police Officer, and finally a guard in the Royal Mint. However,
+                  recently Ieuan experienced some small health issues, inspring him to rethink his will.
+                  He wants to leave large portion for his children and grandchildren, but he has decided to
+                  set aside some money for charitable causes.
+
+Owns pets         None, but used to have several dogs
+
+Digital literacy  Very little. Ieuan used computers for a short time before retirement.
+
+Web usage         Extremely little. Ieuan accesses a basic email account for communication, but nothing else.
+
+Trigger           Ieuan saw a Preloved Pets advert in the local newspaper.
+
+Goal              Gift a portion of his will to Preloved Pets
+----------------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------------
+Details
+----------------- ----------------------------------------------------------------------------------------
+Image             ![Image of Ceri Davies](images/ceri-davies.jpg){ width=35% }
+
+Name              Ceri Davies
+
+Age               28
+
+Location          Bridgend, Bridgend
+
+Occupation        Software Developer
+
+Life stage        Engaged with no children
+
+Description       Ceri Davies is a software developer. She lives with her fiance who she has recently bought
+                  her first house with. She studied computer science in university and proceeded to get a
+                  job as a software engineer. Both Ceri and her finance love cats. They raised their first
+                  cat from kitten, and their second was rehomed from Preloved Pets. They both want whats
+                  best for their cats.
+
+Owns pets         2 cats
+
+Digital literacy  Very good digital literacy. Ceri has a desktop, laptop, and phone, all of which she uses
+                  extensively
+
+Web usage         Ceri Davies uses the web extensively
+
+Trigger           One of Ceri's cats was rehomed from Preloved Pets. Due to her experience, she wants
+                  to support Preloved Pets regularly and view the newsletter photos.
+
+Goal              Ceri wants to sign up to the supporters club
+---------------------------------------------------------------------------------------------------------
+
+#### Scenarios
+
+Assumptions about our users:
+
+Goals
+Pain points
+Internet knowledge
+Payment methods
+
+Proto personas:
+Fictitious person
+
+- Name
+- Where live
+- What they do
+- Frustrations
+- Day in their life
+- Before, after during use of product
+- Photos
+- Quotes
+- Colour
+
+Primary  Adopt
+secondary Donate
+
+Persona scenario:
+
 ### Personality and Tone
 
 #### Wireframes
