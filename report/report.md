@@ -179,7 +179,7 @@ Supporters club home page,
 
 ![Desktop update supporter account details](images/wireframes/flows/desktop-update-details-flow.png)
 
-![Mobile update supporter account details](images/wireframes/flows/mobile-update-deatils-flow.png)
+![Mobile update supporter account details](images/wireframes/flows/mobile-update-details-flow.png)
 
 ### Persuasive Tactics
 
