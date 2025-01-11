@@ -244,6 +244,22 @@ End goal          Ceri wants to sign up to the supporters club
 
 #### Scenarios
 
+##### Rhys Scenario
+
+Over the past year, Rhys' children have been begging for a pet dog. Rhys wants
+to surprise his eldest child on their birthday by gifting them a dog, hoping
+that they will take care of it. When commuting to his clients, Rhys listens to
+the local radio, repeatedly hearing adverts for Preloved Pets. After work,
+he googles the charity on his phone, and visits their website. Preloved Pets
+site highlights pets available for rehoming and Rhys finds a dog her daughter
+would like. He clicks on the enquire button for the dog. The enquire button
+organises an email conversation with Preloved Pets and Rhys is provided with a
+booking. He is linked to the contact us page, where he finds Preloved Pets'
+location on Google Maps. On the booking day, Rhys uses the Google Maps directions
+to commute to Preloved Pets, where he inspects the dog, and decides to rehome it.
+When finishing the process, Rhys is shown Preloved Pets news area. The news
+area contains beginner articles on dog care, and Preloved Pets donation goals.
+
 ### Personality and Tone
 
 #### Wireframes
