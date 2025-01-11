@@ -105,7 +105,7 @@ They are regular users of the site.
 
 #### Personas
 
-Summary view
+Summary view,
 
 ----------------------------------------------------------------------------------------------------------
 Details           Primary persona
@@ -124,7 +124,7 @@ Life stage        Married with 2 children
 
 Description       Rhys is self-employed electrician with a house and fostering family. In his early 20s
                   he married and now has 2 children, aged 6 and 7. He wants what is best for his family.
-                  Since he is self-employed with children, he lacks time and a busy schedule.
+                  Since he is self-employed with children, he lacks time due to his busy schedule.
 
 Owns pets         No
 
@@ -133,10 +133,12 @@ Digital literacy  Rhys owns a phone, and a laptop he uses for his electrical bus
 
 Web usage         Rhys uses E-commerce regularly and checks the news when he has time.
 
+Life goal         Rhys wants to make his family happy and do what is best for them.
+
 Trigger           Rhys's children have been desperate for a pet dog over the past year. However,
                   he is worried it might be a fad for his children.
 
-Goal              Rhys wants to get a pet dog for his children in a quick, no-nonsense manner
+End goal          Rhys wants to get a pet dog for his children in a quick, no-nonsense manner
 ----------------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------------------
@@ -168,7 +170,7 @@ Trigger           Dafydd was driving to work when he heard a radio advertisement
                   Dafydd loves his cat and other pets so he decided to make a one-off donation of £10 to
                   Preloved Pets
 
-Goal              Dafydd wants to make a one-off donation to Preloved Pets
+End goal          Dafydd wants to make a one-off donation to Preloved Pets
 ----------------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------------------
@@ -201,7 +203,7 @@ Web usage         Extremely little. Ieuan accesses a basic email account for com
 
 Trigger           Ieuan saw a Preloved Pets advert in the local newspaper.
 
-Goal              Gift a portion of his will to Preloved Pets
+End goal              Gift a portion of his will to Preloved Pets
 ----------------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------------------
@@ -235,35 +237,12 @@ Web usage         Ceri Davies uses the web extensively
 Trigger           One of Ceri's cats was rehomed from Preloved Pets. Due to her experience, she wants
                   to support Preloved Pets regularly and view the newsletter photos.
 
-Goal              Ceri wants to sign up to the supporters club
+End goal          Ceri wants to sign up to the supporters club
 ---------------------------------------------------------------------------------------------------------
 
+![Rhys Thomas persona diagram](images/rhys-thomas-persona-diagram.drawio.png)
+
 #### Scenarios
-
-Assumptions about our users:
-
-Goals
-Pain points
-Internet knowledge
-Payment methods
-
-Proto personas:
-Fictitious person
-
-- Name
-- Where live
-- What they do
-- Frustrations
-- Day in their life
-- Before, after during use of product
-- Photos
-- Quotes
-- Colour
-
-Primary  Adopt
-secondary Donate
-
-Persona scenario:
 
 ### Personality and Tone
 
