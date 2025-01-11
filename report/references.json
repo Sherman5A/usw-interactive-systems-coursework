@@ -265,6 +265,49 @@
     "URL": "https://www.shutterstock.com/image-photo/cat-animal-shelter-1773024227"
   },
   {
+    "id": "kirk-wadeUKDisabilityStatistics2025",
+    "abstract": "An estimated 16.1 million people in the UK had a disability in 2022/23, accounting for 24% of the total population.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          1,
+          11
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Kirk-Wade",
+        "given": "Esme"
+      },
+      {
+        "family": "Wong",
+        "given": "Helen"
+      },
+      {
+        "family": "Stiebahl",
+        "given": "Sonja"
+      }
+    ],
+    "citation-key": "kirk-wadeUKDisabilityStatistics2025",
+    "issued": {
+      "date-parts": [
+        [
+          "2025",
+          1,
+          11
+        ]
+      ]
+    },
+    "language": "en-GB",
+    "source": "commonslibrary.parliament.uk",
+    "title": "UK disability statistics: Prevalence and life experiences",
+    "title-short": "UK disability statistics",
+    "type": "article-journal",
+    "URL": "https://commonslibrary.parliament.uk/research-briefings/cbp-9602/"
+  },
+  {
     "id": "kreuzschnabelEnglishDogSitting2016",
     "accessed": {
       "date-parts": [

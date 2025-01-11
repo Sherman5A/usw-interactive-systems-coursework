@@ -13,18 +13,16 @@ csl: "university-of-south-wales-harvard.csl"
 nocite: |
 ...
 
-# Designing and Implementing Interactive Systems Design Brief
+# Design Brief
 
-## Design Brief
-
-### The Objectives
+## The Objectives
 
 Preloved Pets is a local charity that finds new homes for pets after their
 owners death. Currently they advertise rehousing in the local news paper, shops,
 and radio station. The charity is self-funded with income from, wills, one-off
 donations, and a charity subscription to a 'supporters club'.
 
-Therefore, the main goal of the site is to advertise new homes for pets; this
+Therefore, the main goal of the website is to advertise new homes for pets; this
 is Preloved Pets reason for existence. Advertising pets in radio stations
 and shops does not provide a permanent, updated catalogue of pets. Radio stations
 may only advertise few times a day, and shop and newspaper issues quickly become
@@ -66,9 +64,9 @@ enclosures. The website can be used to highlight progress, donation goals,
 and incentives. The goal has two success criteria: completion of the reptile
 area, and completion of the fish area.
 
-### The Target Audience
+## The Target Audience
 
-#### Key User Groups
+### Key User Groups
 
 Preloved Pets has several key user groups separated by their goals, behaviours,
 and attitudes to the charity. The user groups and personas are created through
@@ -99,11 +97,11 @@ older demographic, which should be considered in the website's design and tone
 The final key user group is supporters club member. The supporters club member
 is a subset of charitable donor. However, their goals are slightly different.
 The club members want to donate to access the club and view the special magazine.
-They are regular users of the site.
+They are regular users of the website.
 
 ![2x2 key user group summary view](images/key-user-groups.drawio.png)
 
-#### Personas
+### Personas
 
 Summary view,
 
@@ -189,15 +187,16 @@ Occupation        Retired
 Life stage        Married with 3 children and 5 grandchildren
 
 Description       Ieuan is an 81 year old pensioner. Ieuan and his wife remain fiercyly independent, and very
-                  active within the communicty despite their age. He started work in Port Talbot Steelworks,
+                  active within the community despite their age. He started work in Port Talbot Steelworks,
                   but then worked as a Police Officer, and finally a guard in the Royal Mint. However,
-                  recently Ieuan experienced some small health issues, inspring him to rethink his will.
+                  recently Ieuan experienced some small health issues, inspiring him to rethink his will.
                   He wants to leave large portion for his children and grandchildren, but he has decided to
                   set aside some money for charitable causes.
 
 Owns pets         None, but used to have several dogs
 
-Digital literacy  Very little. Ieuan used computers for a short time before retirement.
+Digital literacy  Very little. Ieuan used computers for a short time before retirement. He owns a mobile phone
+                  which he uses for phone calls. For his emails, Ieuan uses a tablet, on account of his eyesight.
 
 Web usage         Extremely little. Ieuan accesses a basic email account for communication, but nothing else.
 
@@ -224,7 +223,7 @@ Life stage        Engaged with no children
 Description       Ceri Davies is a software developer. She lives with her fiance who she has recently bought
                   her first house with. She studied computer science in university and proceeded to get a
                   job as a software engineer. Both Ceri and her finance love cats. They raised their first
-                  cat from kitten, and their second was rehomed from Preloved Pets. They both want whats
+                  cat from kitten, and their second was rehomed from Preloved Pets. They both want what is
                   best for their cats.
 
 Owns pets         2 cats
@@ -242,16 +241,16 @@ End goal          Ceri wants to sign up to the supporters club
 
 ![Rhys Thomas persona diagram](images/rhys-thomas-persona-diagram.drawio.png)
 
-#### Scenarios
+### Scenarios
 
-##### Rhys Scenario
+#### Rhys Scenario
 
 Over the past year, Rhys' children have been begging for a pet dog. Rhys wants
 to surprise his eldest child on their birthday by gifting them a dog, hoping
 that they will take care of it. When commuting to his clients, Rhys listens to
 the local radio, repeatedly hearing adverts for Preloved Pets. After work,
 he googles the charity on his phone, and visits their website. Preloved Pets
-site highlights pets available for rehoming and Rhys finds a dog her daughter
+website highlights pets available for rehoming and Rhys finds a dog her daughter
 would like. He clicks on the enquire button for the dog. The enquire button
 organises an email conversation with Preloved Pets and Rhys is provided with a
 booking. He is linked to the contact us page, where he finds Preloved Pets'
@@ -260,9 +259,95 @@ to commute to Preloved Pets, where he inspects the dog, and decides to rehome it
 When finishing the process, Rhys is shown Preloved Pets news area. The news
 area contains beginner articles on dog care, and Preloved Pets donation goals.
 
-### Personality and Tone
+## Personality and Tone
 
-#### Wireframes
+### Design Principles
+
+Prior to wireframing, several design principles were created based on the
+Preloved Pets personas. The principles were made to be short, informal,
+and memorable.
+
+#### Quick experience
+
+This principle aims to reduce the user's time filling in complicated forms on the
+website. Nobody wants the experience of filling in a forms and correcting
+its validation errors only to reach another form afterwards. This sentiment
+was echoed by our primary persona, Rhys Thomas.
+
+The outcomes are:
+
+- Forms should be a single page
+- Form controls should be set automatically where possible.
+- Preloved Pets' website must be not fatiguing to navigate
+
+#### A love for pets
+
+Preloved Pets' love for all pets needs to be clear. Extensive pet imagery and
+emotive language should be used throughout the entire website. This imagery
+includes: volunteers surrounded by pets, both cats and dogs playing, and
+comfortable facilities. Words such as 'friends', 'love', 'companions', and
+'adore' should used in the website's content.
+
+The outcomes are:
+
+- Emotive language about pets
+- Usage of pet imagery throughout entire website
+- Show a human connection with pets. This includes playing, hugging, resting,
+  and feeding pets
+
+#### Part of the community
+
+Preloved Pets is a charity that is self-funded by the community. The community's
+role in Preloved Pets daily running must be shown. This can be shown through
+community imagery, direct language using pronouns such as, 'you', 'we', 'our',
+and 'us', creating news articles about local pets, and calls to donate or volunteer
+using local people or organisations.
+
+The outcomes are:
+
+- Community imagery
+- Use of direct language
+- Local news articles
+
+#### It's charity, not business
+
+At all times, the website should highlight that Preloved Pets is a local charity;
+it relies on donations and volunteers. There should be widespread calls to
+volunteer or donate, utilising emotive language and incentives to persuade people.
+Rather than business terms, charitable language should be used. 'Volunteer'
+should be written instead of 'staff', and donators, volunteers, and advertisers
+should regularly thanked for their contributions.
+
+The outcomes are:
+
+- Frequent calls to action
+- Never use business language
+- Regularly thank people for their help
+
+#### Accessible to everyone
+
+There are 16.1 million disabled people in the United Kingdom, accounting for
+24% of the total population [@kirk-wadeUKDisabilityStatistics2025]. An
+inaccessible website can damage the user's experience or completely prevent
+a person using the website. To ensure all donors and users can use Preloved
+Pets' service, Web Content Accessibility Guidelines (WCAG) Level 2 (AA) will be
+folowed. Notable guidelines include:  colour contrast, including alternate text,
+heading hierachies, non-descriptive links, and bad keyboard navigation.
+
+The outcomes are:
+
+- Follow WCAG AA
+
+### Mood Board
+
+![Mood board](images/mood-board.drawio.png)
+
+### Wireframes
+
+A large amount of the personas will be accessing the website using mobile devices;
+therefore, it is important that website accessibility remains consistent across both
+desktop and mobile form factors. To achieve this, both a desktop and mobile
+wireframe and flow will be created for all pages.
 
 Homepage,
 
@@ -312,21 +397,21 @@ Supporters club home page,
 
 ![Mobile supporters club home page](images/wireframes/mobile-supporters-home.png)
 
-#### Wireflows - Storyboards
+### Wireflows - Storyboards
 
-##### Donation wireflows
+#### Donation wireflows
 
 ![Desktop donation wireflow](images/wireframes/flows/desktop-donation-flow.png)
 
 ![Mobile donation wireflow](images/wireframes/flows/mobile-donation-flow.png)
 
-##### Rehome pet flow
+#### Rehome pet flow
 
 ![Desktop rehome wireflow](images/wireframes/flows/desktop-adopt-pet-flow.png)
 
 ![Mobile rehome wireflow](images/wireframes/flows/mobile-adopt-pet-flow.png)
 
-##### Sign in flow
+#### Sign in flow
 
 ![Desktop sign in wireflow](images/wireframes/flows/desktop-sign-in-flow.png)
 
@@ -338,19 +423,19 @@ Supporters club home page,
 
 ![Mobile update supporter account details](images/wireframes/flows/mobile-update-details-flow.png)
 
-### Persuasive Tactics
+## Persuasive Tactics
 
-### Single Minded Message
+## Single Minded Message
 
-## Supporting Material
+# Supporting Material
 
-### Website URL
+## Website URL
 
 [Website URL](localhost:8080)
 
-### PHP Page Listing
+## PHP Page Listing
 
-The entire site is PHP; therefore, the shown code listings are PHP-heavy files.
+The entire website is PHP; therefore, the shown code listings are PHP-heavy files.
 
 `index.php`,
 
@@ -813,7 +898,7 @@ The entire site is PHP; therefore, the shown code listings are PHP-heavy files.
   }
 ```
 
-### Media Sources
+## Media Sources
 
 Fonts used:
 
@@ -879,11 +964,11 @@ About us page:
       views.
 - Our staff [@andresrDogVetStock2014]
   
-### Validation Report
+## Validation Report
 
 <!-- TODO: Add views -->
 
-#### Cascading Style Sheets
+### Cascading Style Sheets
 
 `reset.css`,
 
@@ -1691,7 +1776,7 @@ ul.list-pets li>a.anchor-button {
 
 ![Successful validation report for donation.css](images/validation/donations-css.png)
 
-### Cascading Style Sheets Explanation
+## Cascading Style Sheets Explanation
 
 The `reset.css` file aims overwrite default browser styles to a default,
 unopinionated, neutral state. Different browsers have distinct presentation
@@ -1705,7 +1790,7 @@ The CSS reset used is an edited combination of 2 style sheets,
 and rules were modified.
 
 In the `main.css`, first the root colours for the entire website are defined in
-CSS variables. This allows easy changes to the site's colour scheme through
+CSS variables. This allows easy changes to the website's colour scheme through
 simple variable changes rather than replacing every colour declaration.
 
 Furthermore, custom fonts used are defined at the root level. A single
@@ -1751,7 +1836,7 @@ animations were used as the `marque` tag in favour of this method
 [@mdnMarqueeElementHTML2024]. The animation scrolls infinitely, looping every
 30 seconds.
 
-### Reflection
+## Reflection
 
 Overall, the coursework went quite well. Despite never developing with PHP before,
 the coursework went well. Various patterns such as routing, separation
@@ -1771,7 +1856,7 @@ have suitable alt tags, and all HTML and CSS is valid. On the other hand, one
 of the biggest challenges encountered was addressing the inability to create
 a dynamic website. JavaScript was not in the brief's scope; thus it was not
 used at all in the project. However, JavaScript's addition would greatly expand
-the capabilities of the site, especially in mobile accessibility. For example,
+the capabilities of the website, especially in mobile accessibility. For example,
 the large heading could be replaced by an expandable menu button, reducing
 visual clutter. One of the biggest difficulties was creating example content
 for the website; writing home page, and about us content in the correct tone
@@ -1781,4 +1866,4 @@ quality of the images was a weakness. Overall, the coursework was successful
 and provided a great learning PHP learning opportunity; however, writing and
 sourcing content for the website was difficult.
 
-## Bibliography and Usages
+# Bibliography and Usages
