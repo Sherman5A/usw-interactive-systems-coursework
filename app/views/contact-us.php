@@ -29,19 +29,24 @@
         <h2>By social media</h2>
         <div class="inset-text">
           <a href="https://www.youtube.com/channel/UC7DW3cdAYBTn5I6Swh_RZYw" class="social-media-link">
-            <img src="/public/img/youtube-dark.svg" alt="YouTube logo - Link to __'s YouTube channel" width="22">
+            <img src="<?php echo BASE_URL . "/public/img/youtube-dark.svg" ?>"
+                 alt="YouTube logo - Link to __'s YouTube channel" width="22">
             YouTube
           </a>
           <a href="https://www.facebook.com/UniversityOfSouthWales" class="social-media-link">
-            <img src="/public/img/facebook-dark.svg" alt="Facebook logo - Link to __'s Facebook account" width="22">
+            <img src="<?php echo BASE_URL . "/public/img/facebook-dark.svg" ?>"
+                 alt="Facebook logo - Link to __'s Facebook account" width="22">
             Facebook
           </a>
           <a href="https://x.com/UniSouthWales" class="social-media-link">
-            <img src="/public/img/x-dark.svg" alt="X logo - Link to __'s X account" width="22">
+            <img src="<?php echo BASE_URL . "/public/img/x-dark.svg" ?>"
+                 alt="X logo - Link to __'s X account"
+                 width="22">
             X
           </a>
           <a href="https://www.instagram.com/unisouthwales/" class="social-media-link">
-            <img src="../public/img/instagram-dark.svg" alt="Instagram logo - Link to __'s Instagram account"
+            <img src="<?php echo BASE_URL . "/public/img/instagram-dark.svg" ?>"
+                 alt="Instagram logo - Link to __'s Instagram account"
                  width="22">
             Instagram
           </a>

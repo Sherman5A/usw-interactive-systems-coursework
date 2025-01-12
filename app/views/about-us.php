@@ -9,12 +9,13 @@
       <div class="reverse-header-img">
         <h1>About us</h1>
         <div class="top-banner-img">
-          <img src="/public/img/cat-licking-paw.jpg" alt="White and brown cat licking it's paw">
+          <img src="<?php echo BASE_URL . "/public/img/cat-licking-paw.jpg" ?>"
+               alt="White and brown cat licking it's paw">
         </div>
       </div>
       <div>
         <video controls autoplay style="margin: 10px 0">
-          <source src="/public/video/preloved-pets-sample.mp4">
+          <source src="<?php echo BASE_URL . "/public/video/preloved-pets-sample.mp4" ?>">
         </video>
         <p>
           We are a local charity that finds new loving, families for pets after their owners have died.
@@ -29,8 +30,8 @@
       <div>
         <div class="center-img">
           <figure>
-            <img src="/public/img/our-founder.jpg" alt="Preloved pets founder">
-            <figcaption>John Doe, fouder of Preloved Pets</figcaption>
+            <img src="<?php echo BASE_URL . "/public/img/our-founder.jpg" ?>" alt="Preloved pets founder">
+            <figcaption>John Doe, founder of Preloved Pets</figcaption>
           </figure>
         </div>
         <h3>Our founder</h3>
@@ -42,7 +43,7 @@
       <div>
         <div class="center-img">
           <figure>
-            <img src="/public/img/our-staff.jpg" alt="3 of our staff with a dog">
+            <img src="<?php echo BASE_URL . "/public/img/our-staff.jpg" ?>" alt="3 of our staff with a dog">
             <figcaption>Staff with John Doe the dog</figcaption>
           </figure>
         </div>

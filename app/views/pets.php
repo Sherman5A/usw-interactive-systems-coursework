@@ -31,7 +31,7 @@
             <li>
               <div class="pet-title-image">
                 <h2><?php echo htmlspecialchars(ucwords($pet->pet_name)) ?></h2>
-                <img src="/public/img/pets/<?php echo $pet->image_path ?>"
+                <img src="<?php echo BASE_URL . "/public/img/pets/" . $pet->image_path ?>"
                      alt="<?php echo "Picture of a {$pet->pet_type} called {$pet->pet_name}" ?>"
                 >
               </div>

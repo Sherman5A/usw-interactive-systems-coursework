@@ -10,6 +10,9 @@
 
   session_start();
   $request = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+  if (is_string(BASE_PATH)) {
+    $request = str_replace(BASE_PATH, "", $request);
+  }
   $db = new database(DB_HOST, DB_NAME, DB_PORT, DB_USER, DB_PASS, DB_SOCK);
   // Routing
   switch ($request) {

@@ -11,7 +11,8 @@
         <div class="reverse-header-img">
           <h2>Large trust donation</h2>
           <div class="news-article-img">
-            <img src="/public/img/cheque-handover.jpg" alt="Person handing cheque to another person">
+            <img src="<?php echo BASE_URL . "/public/img/cheque-handover.jpg" ?>"
+                 alt="Person handing cheque to another person">
           </div>
         </div>
         <p>We have received a £2,000 donation from a local charity trust to help continue housing more pets!</>
@@ -51,7 +52,8 @@
         <div class="reverse-header-img">
           <h2>Update on reptile housing goal</h2>
           <div class="news-article-img">
-            <img src="/public/img/leopard-gecko.jpg" alt="Picture of a pet Leopard Gecko in a enclosure">
+            <img src="<?php echo BASE_URL . "/public/img/leopard-gecko.jpg" ?>"
+                 alt="Picture of a pet Leopard Gecko in a enclosure">
           </div>
         </div>
         <p>Our reptile housing goal has progressed to 50% completion due to all of your support.</p>
@@ -79,7 +81,7 @@
         <div class="reverse-header-img">
           <h2>New pet area</h2>
           <div class="news-article-img">
-            <img src="/public/img/pet-area.jpg" alt="Picture of pet play area">
+            <img src="<?php echo BASE_URL . "/public/img/pet-area.jpg" ?>" alt="Picture of pet play area">
           </div>
         </div>
         <p>
