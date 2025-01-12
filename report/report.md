@@ -331,8 +331,8 @@ There are 16.1 million disabled people in the United Kingdom, accounting for
 inaccessible website can damage the user's experience or completely prevent
 a person using the website. To ensure all donors and users can use Preloved
 Pets' service, Web Content Accessibility Guidelines (WCAG) Level 2 (AA) will be
-folowed. Notable guidelines include:  colour contrast, including alternate text,
-heading hierachies, non-descriptive links, and bad keyboard navigation.
+followed. Notable guidelines include:  colour contrast, including alternate text,
+heading hierarchies, non-descriptive links, and bad keyboard navigation.
 
 The outcomes are:
 
@@ -425,7 +425,36 @@ Supporters club home page,
 
 ## Persuasive Tactics
 
+As Preloved Pets is funded by donations, persuasive tactics must be used
+to convince potential donors. Extensive usage of direct address will be used
+through using words such as 'you', 'us', and 'we' to connect with users on
+a personal level. Additionally, emotive language will be used to provoke a
+sympathetic, caring response towards Preloved Pets goals.
+
+Furthermore several active techniques will be used. On the home and donation
+pages, a variation of self-monitoring will be used. However, the goals will be
+community-based rather than personal. A live money counter will show progress
+towards donation milestones such as reptiles and fish enclosures. The goal is
+inspire a sense of community and achievement. In addition, Preloved Pets'
+homepage will be updated with periodic banners and calls to donate, containing
+specialised images and language. Periodic events include Christmas, Easter,
+Halloween, Mother's Day, Valentines, New Year, and St Davids Day. Finally,
+social proof will be used to reinforce the other persuasive tactics. Below
+Preloved Pets' header, a scrolling donation bar will be added. Donations that
+opt into the bar will be displayed with custom message and donation amount.
+All incoming users will see this bar and all the different people who donated
+and reflect their behaviour, increasing the amount of donations to Preloved
+Pets.
+
 ## Single Minded Message
+
+Preloved Pets single minded message will combine the website's goals, advertising
+pets for rehoming, and increasing funding through donations. The phrase,
+
+> Help us give pets a forever family
+
+combines these goals. 'Help' refers to donating and 'giving pets a forever
+family' generates an emotive, positive, and caring response about rehoming pets.
 
 # Supporting Material
 
