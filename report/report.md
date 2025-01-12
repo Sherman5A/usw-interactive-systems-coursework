@@ -186,7 +186,7 @@ Occupation        Retired
 
 Life stage        Married with 3 children and 5 grandchildren
 
-Description       Ieuan is an 81 year old pensioner. Ieuan and his wife remain fiercyly independent, and very
+Description       Ieuan is an 81-year-old pensioner. Ieuan and his wife remain fiercely independent, and very
                   active within the community despite their age. He started work in Port Talbot Steelworks,
                   but then worked as a Police Officer, and finally a guard in the Royal Mint. However,
                   recently Ieuan experienced some small health issues, inspiring him to rethink his will.
@@ -220,7 +220,7 @@ Occupation        Software Developer
 
 Life stage        Engaged with no children
 
-Description       Ceri Davies is a software developer. She lives with her fiance who she has recently bought
+Description       Ceri Davies is a software developer. She lives with her fiancé who she has recently bought
                   her first house with. She studied computer science in university and proceeded to get a
                   job as a software engineer. Both Ceri and her finance love cats. They raised their first
                   cat from kitten, and their second was rehomed from Preloved Pets. They both want what is
@@ -271,7 +271,7 @@ and memorable.
 
 This principle aims to reduce the user's time filling in complicated forms on the
 website. Nobody wants the experience of filling in a forms and correcting
-its validation errors only to reach another form afterwards. This sentiment
+its validation errors only to reach another form afterward. This sentiment
 was echoed by our primary persona, Rhys Thomas.
 
 The outcomes are:
@@ -315,8 +315,8 @@ At all times, the website should highlight that Preloved Pets is a local charity
 it relies on donations and volunteers. There should be widespread calls to
 volunteer or donate, utilising emotive language and incentives to persuade people.
 Rather than business terms, charitable language should be used. 'Volunteer'
-should be written instead of 'staff', and donators, volunteers, and advertisers
-should regularly thanked for their contributions.
+should be written instead of 'staff' and donors, volunteers, and advertisers
+should be regularly thanked for their contributions.
 
 The outcomes are:
 
@@ -431,11 +431,11 @@ through using words such as 'you', 'us', and 'we' to connect with users on
 a personal level. Additionally, emotive language will be used to provoke a
 sympathetic, caring response towards Preloved Pets goals.
 
-Furthermore several active techniques will be used. On the home and donation
+Furthermore, several active techniques will be used. On the home and donation
 pages, a variation of self-monitoring will be used. However, the goals will be
 community-based rather than personal. A live money counter will show progress
 towards donation milestones such as reptiles and fish enclosures. The goal is
-inspire a sense of community and achievement. In addition, Preloved Pets'
+inspiring a sense of community and achievement. In addition, Preloved Pets'
 homepage will be updated with periodic banners and calls to donate, containing
 specialised images and language. Periodic events include Christmas, Easter,
 Halloween, Mother's Day, Valentines, New Year, and St Davids Day. Finally,
@@ -448,13 +448,11 @@ Pets.
 
 ## Single Minded Message
 
-Preloved Pets single minded message will combine the website's goals, advertising
-pets for rehoming, and increasing funding through donations. The phrase,
-
-> Help us give pets a forever family
-
-combines these goals. 'Help' refers to donating and 'giving pets a forever
-family' generates an emotive, positive, and caring response about rehoming pets.
+Preloved Pets single-minded message will combine the website's goals,
+advertising pets for rehoming, and increasing funding through donations. The
+phrase, 'help us give pets a forever family' combines these goals. 'Help'
+refers to donating and 'giving pets a forever family' generates an emotive,
+positive, and caring response about rehoming pets.
 
 # Supporting Material
 
@@ -1641,6 +1639,10 @@ ul.list-pets li>a.anchor-button {
 
 .sideways-banner-img {
   width: 100%
+}
+
+.imageless-banner {
+  margin-bottom: 3rem;
 }
 
 /* Side by side articles */
