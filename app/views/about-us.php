@@ -13,6 +13,9 @@
         </div>
       </div>
       <div>
+        <video controls autoplay style="margin: 10px 0">
+          <source src="/public/video/preloved-pets-sample.mp4">
+        </video>
         <p>
           We are a local charity that finds new loving, families for pets after their owners have died.
         </p>
