@@ -7,6 +7,10 @@
   <div class="main-content">
     <main>
       <h1>Donate</h1>
+      <p>Preloved Pets is entirely self-funded by you, the community, and greatly
+        appreciated. If you need any assistance with donating, please
+        <a href="/contact-us">contact us</a>
+      </p>
       <form action="/donation/confirm" method="post" class="donation-form">
         <h2>Donation form</h2>
         <fieldset>

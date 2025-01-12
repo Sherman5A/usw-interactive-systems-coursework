@@ -25,6 +25,14 @@
           <img src="/public/img/man-with-dog.jpg" alt="Man playing with a brown dog">
         </div>
       </div>
+      <div class="imageless-banner">
+        <h2 class="secondary-title">Join the supporters club and visit our special Christmas party!</h2>
+        <p class="main-title-subtitle">
+          Supporters club members pay a monthly fee to receive a quarterly magazine and invitations to
+          many special events.
+        </p>
+        <a href="/donate" class="anchor-button large-anchor-button">Join the supporters club</a>
+      </div>
       <div class="sideways-banner sideways-banner-reverse">
         <div class="sideways-banner-text">
           <h2 class="secondary-title">

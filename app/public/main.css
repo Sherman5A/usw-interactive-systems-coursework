@@ -516,6 +516,10 @@ ul.list-pets li > a.anchor-button {
   width: 100%
 }
 
+.imageless-banner {
+  margin-bottom: 3rem;
+}
+
 /* Side by side articles */
 .adjacent-articles {
   display: flex;
