@@ -1,7 +1,7 @@
 services:
   db:
     container_name: mysql-compose
-    image: mysql
+    image: docker.io/mysql
     volumes:
       - mysql-volume:/var/lib/mysql/
     ports:

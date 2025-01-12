@@ -1,4 +1,4 @@
-create table pet_type
+create table public.pet_type
 (
     pet_type_id int auto_increment
         primary key,

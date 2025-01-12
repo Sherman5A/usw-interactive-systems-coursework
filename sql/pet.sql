@@ -1,4 +1,4 @@
-create table pet
+create table public.pet
 (
     pet_id          int auto_increment
         primary key,

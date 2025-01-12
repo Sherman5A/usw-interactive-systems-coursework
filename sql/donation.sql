@@ -1,4 +1,4 @@
-create table donation
+create table public.donation
 (
     donation_id      int auto_increment
         primary key,
