@@ -9,13 +9,13 @@
   {
     private mysqli $conn;
     private string $host;
-    private int $port;
+    private ?int $port;
     private string $databaseName;
     private string $user;
     private string $password;
-    private string $sock;
+    private ?string $sock;
 
-    public function __construct(string $host, string $name, int $port, string $user, string $password, string $sock)
+    public function __construct(string $host, string $name, ?int $port, string $user, string $password, ?string $sock)
     {
       $this->host = $host;
       $this->databaseName = $name;
@@ -31,7 +31,12 @@
         return $this->conn;
       }
 
-      $this->conn = new mysqli($this->host, $this->user, $this->password, $this->databaseName, $this->port, $this->sock);
+      if (isset($this->port, $this->sock)) {
+        $this->conn = new mysqli($this->host, $this->user, $this->password, $this->databaseName, $this->port, $this->sock);
+      } else {
+        $this->conn = new mysqli($this->host, $this->user, $this->password, $this->databaseName);
+      }
+
       if ($this->conn->connect_error) {
         exit("Failed to connect to mysql database {$this->conn->connect_error}");
       }
