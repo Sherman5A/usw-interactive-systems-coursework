@@ -1,4 +1,5 @@
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)＄ index.php
-FallbackResource /index.php
+# Coursework server uses IIS with few modules so RewriteEngine can not be used
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.*)＄ index.php
+#FallbackResource /index.php

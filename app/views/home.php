@@ -19,7 +19,7 @@
           <p class="main-title-subtitle">
             Monthly donors get an exclusive newsletter and club area!
           </p>
-          <a href="<?php echo BASE_URL . "/donate" ?>" class="anchor-button large-anchor-button">
+          <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>" class="anchor-button large-anchor-button">
             Donate today
           </a>
         </div>
@@ -34,7 +34,7 @@
           Supporters club members pay a monthly fee to receive a quarterly magazine and invitations to
           many special events.
         </p>
-        <a href="<?php echo BASE_URL . "/donate" ?>" class="anchor-button large-anchor-button">
+        <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>" class="anchor-button large-anchor-button">
           Join the supporters club</a>
       </div>
       <div class="sideways-banner sideways-banner-reverse">
@@ -43,7 +43,8 @@
             We are a local charity that finds new, loving families for pets after their owners have died.
           </h2>
           <p class="main-title-subtitle">We currently accept cats, dogs, and rodents.</p>
-          <a href="<?php echo BASE_URL . "/about-us" ?>" class="anchor-button large-anchor-button grey-anchor">
+          <a href="<?php echo BASE_URL . BASE_FILE . "/about-us" ?>"
+             class="anchor-button large-anchor-button grey-anchor">
             About us
           </a>
         </div>
@@ -59,7 +60,7 @@
             With <span class="bold-text">your</span> help, we want to expand to housing rodents, reptiles and fish in
             need.
           </p>
-          <a href="<?php echo BASE_URL . "/donate" ?>" class="anchor-button large-anchor-button">
+          <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>" class="anchor-button large-anchor-button">
             Donate to our goal
           </a>
         </div>
@@ -70,7 +71,7 @@
       <div>
         <h2 class="secondary-title">Latest News</h2>
         <div class="adjacent-articles">
-          <a href="<?php echo BASE_URL . "/news" ?>" class="adjacent-article">
+          <a href="<?php echo BASE_URL . BASE_FILE . "/news" ?>" class="adjacent-article">
             <div class="adjacent-article-title">
               <h3>Large trust donation</h3>
               <img src="<?php echo BASE_URL . "/public/img/cheque-handover.jpg" ?>"
@@ -78,7 +79,7 @@
             </div>
             <p>We have received a £2,000 donation from a local charity trust to help continue housing more pets.</p>
           </a>
-          <a href="<?php echo BASE_URL . "/news" ?>" class="adjacent-article">
+          <a href="<?php echo BASE_URL . BASE_FILE . "/news" ?>" class="adjacent-article">
             <div class="adjacent-article-title">
               <h3>Update on reptile housing goal</h3>
               <img src="<?php echo BASE_URL . "/public/img/leopard-gecko.jpg" ?>"
@@ -86,7 +87,7 @@
             </div>
             <p>Our reptile housing goal has progressed to 50% completion due to all of your support.</p>
           </a>
-          <a href="<?php echo BASE_URL . "/news" ?>" class="adjacent-article">
+          <a href="<?php echo BASE_URL . BASE_FILE . "/news" ?>" class="adjacent-article">
             <div class="adjacent-article-title">
               <h3>New pet area</h3>
               <img src="<?php echo BASE_URL . "/public/img/pet-area.jpg" ?>" alt="Picture of pet play area">

@@ -13,6 +13,7 @@
   if (is_string(BASE_PATH)) {
     $request = str_replace(BASE_PATH, "", $request);
   }
+  $request = str_replace(BASE_FILE, "", $request);
   $db = new database(DB_HOST, DB_NAME, DB_PORT, DB_USER, DB_PASS, DB_SOCK);
   // Routing
   switch ($request) {

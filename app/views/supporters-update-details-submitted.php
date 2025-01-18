@@ -38,7 +38,7 @@
           <h1>Unauthorised. You are not a member</h1>
 
           <p>You can become a member by submitting a monthly donation
-            <a href="<?php echo BASE_URL . "/donate" ?>">
+            <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>">
               here
             </a>
           </p>

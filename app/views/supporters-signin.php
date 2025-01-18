@@ -9,9 +9,9 @@
       <h1>Supporters Club Login</h1>
       <p>
         Supporters club members are donors who selected the monthly donation
-        option on the <a href="<?php echo BASE_URL . "/donate" ?>">donate form</a>.
+        option on the <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>">donate form</a>.
       </p>
-      <form action="<?php echo BASE_URL . "/supporters/home" ?>" method="post" class="donation-form">
+      <form action="<?php echo BASE_URL . BASE_FILE . "/supporters/home" ?>" method="post" class="donation-form">
         <h2>Sign in details</h2>
         <label for="email">
           Email:

@@ -16,33 +16,33 @@
     <nav class="header-content">
       <ul class="nav-links header-links">
         <li class="header-logo">
-          <a href="<?php echo BASE_URL . "/" ?>">
+          <a href="<?php echo BASE_URL . BASE_FILE . "/" ?>">
             <img src="<?php echo BASE_URL . "/public/img/logo-text.svg" ?>" alt="Preloved pets logo" width="225"/>
             <span class="hidden-text">Preloved Pets</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . "/" ?>">Home</a>
+          <a href="<?php echo BASE_URL . BASE_FILE . "/" ?>">Home</a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . "/donate" ?>">Donate</a>
+          <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>">Donate</a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . "/pets" ?>">Pets</a>
+          <a href="<?php echo BASE_URL . BASE_FILE . "/pets" ?>">Pets</a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . "/news" ?>"> News</a>
+          <a href="<?php echo BASE_URL . BASE_FILE . "/news" ?>"> News</a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . "/about-us" ?>">About us</a>
+          <a href="<?php echo BASE_URL . BASE_FILE . "/about-us" ?>">About us</a>
         </li>
         <li class="right-nav-links">
-          <a href="<?php echo BASE_URL . "/contact-us" ?>">Contact us</a>
+          <a href="<?php echo BASE_URL . BASE_FILE . "/contact-us" ?>">Contact us</a>
         </li>
         <?php if (isset($_SESSION["supporter_details"])) {
           ?>
           <li>
-            <a class="anchor-button" href="<?php echo BASE_URL . "/supporters/home" ?>">
+            <a class="anchor-button" href="<?php echo BASE_URL . BASE_FILE . "/supporters/home" ?>">
               Supporters home
             </a>
           </li>
@@ -53,12 +53,12 @@
           <?php
             if (is_null($_SESSION["supporter_details"])) {
               ?>
-              <a class="anchor-button" href="<?php echo BASE_URL . "/supporters/signin" ?>">
+              <a class="anchor-button" href="<?php echo BASE_URL . BASE_FILE . "/supporters/signin" ?>">
                 Supporters sign in
               </a>
             <?php } else {
               ?>
-              <a class="anchor-button" href="<?php echo BASE_URL . "/supporters/signout" ?>">
+              <a class="anchor-button" href="<?php echo BASE_URL . BASE_FILE . "/supporters/signout" ?>">
                 Sign out
               </a>
               <?php
