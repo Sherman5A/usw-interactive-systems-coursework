@@ -1,5 +1,4 @@
 <?php
-  $title = "Preloved Pets - News";
   include __DIR__ . "/../private/head.php";
 ?>
 <body>
@@ -15,7 +14,7 @@
                  alt="Person handing cheque to another person">
           </div>
         </div>
-        <p>We have received a £2,000 donation from a local charity trust to help continue housing more pets!</>
+        <p>We have received a £2,000 donation from a local charity trust to help continue housing more pets!</p>
         <p>
           Today, Preloved Pets has received a generous donation of £2000 from a local charity
           trust. This incredible support will help us continue our mission of providing a safe and loving home for cats
@@ -37,7 +36,7 @@
           <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>">donation page</a>.
           Volunteers are extremely appreciated and should contact us using one of the methods outlined
           <a href="<?php echo BASE_URL . BASE_FILE . "/contact-us" ?>">here</a> or with this email
-          <a href="mailto:23056792@students.southwales.ac.uk?subject=Volunteer Request">23056792@students.southwales.ac.uk</a>.
+          <a href="mailto:23056792@students.southwales.ac.uk?subject=Volunteer%20Request">23056792@students.southwales.ac.uk</a>.
         </p>
         <p>
           <span class="bold-text">
@@ -107,7 +106,7 @@
             href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>">donation page</a>. Volunteers are extremely
           appreciated and should contact us using one of the methods outlined
           <a href="<?php echo BASE_URL . BASE_FILE . "/contact-us" ?>">here</a> or with this email
-          <a href="mailto:23056792@students.southwales.ac.uk?subject=Volunteer Request">23056792@students.southwales.ac.uk</a>.
+          <a href="mailto:23056792@students.southwales.ac.uk?subject=Volunteer%20Request">23056792@students.southwales.ac.uk</a>.
         </p>
         <p>
           <span class="bold-text">

@@ -12,6 +12,7 @@
   $missing_vars = false;
   try {
     $result = $donation_controller->submit_donation();
+    $title = "Donation successfully submitted";
   } catch (Exception $e) {
     $title = $e->getMessage();
     $missing_vars = true;
@@ -34,13 +35,15 @@
       <p>
         <?php
           if ($result) {
-            echo "Donation successfully submitted to Preloved Pets";
-          } else if ($missing_vars) {
-            echo "<p>Form data incomplete</p>";
-            echo "<p>Resubmit form <a href='/donate'> here</a>";
+          echo "Donation successfully submitted to Preloved Pets";
+        } else if ($missing_vars) {
+        ?>
+      <p>Form data incomplete</p>
+      <p>Resubmit form <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>"> here</a>
+        <?php
           } else {
-            echo "Error submitting to Preloved Pets";
-          }
+          echo "Error submitting to Preloved Pets";
+        }
         ?>
       </p>
       <?php if (!$missing_vars) { ?>
@@ -120,4 +123,5 @@
       ?>
     </main>
   </div>
+  <?php include __DIR__ . "/../private/footer.php"; ?>
 </body>
