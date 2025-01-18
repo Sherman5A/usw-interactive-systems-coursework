@@ -86,7 +86,9 @@
         //          echo "<br>";
         //        }
       ?>
-      <form class="hidden-form" action="./submitted" method="post">
+      <form class="hidden-form"
+            action="<?php echo BASE_URL . "/donation/submitted" ?>"
+            method="post">
         <button type="submit">Submit donation</button>
       </form>
     </main>

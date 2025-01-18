@@ -7,7 +7,7 @@
   <div class="main-content">
     <main>
       <h1>404 - Page Not Found</h1>
-      <p>Go home <a href="/">here</a></p>
+      <p>Go home <a href="<?php echo BASE_URL . "/" ?>">here</a></p>
     </main>
   </div>
   <?php include __DIR__ . "/../private/footer.php"; ?>

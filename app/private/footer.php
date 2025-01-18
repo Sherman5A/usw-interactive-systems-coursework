@@ -1,32 +1,32 @@
 <footer class="footer-wrapper">
   <div class="footer-content">
     <div class="footer-content-logo">
-      <a href="/">
+      <a href="<?php echo BASE_URL . "/" ?>">
         <img src="<?php echo BASE_URL . "/public/img/logo.svg" ?>" alt="Logo - image of cat" width="75"/>
       </a>
     </div>
     <div class="footer-content-links">
       <ul class="nav-links">
         <li>
-          <a href="/">Home</a>
+          <a href="<?php echo BASE_URL . "/" ?>">Home</a>
         </li>
         <li>
-          <a href="/donate">Donate</a>
+          <a href="<?php echo BASE_URL . "/donate" ?>">Donate</a>
         </li>
         <li>
-          <a href="/pets">Pets</a>
+          <a href="<?php echo BASE_URL . "/pets" ?>">Pets</a>
         </li>
         <li>
-          <a href="/news">News</a>
+          <a href="<?php echo BASE_URL . "/news" ?>">News</a>
         </li>
         <li>
-          <a href="/about-us">About us</a>
+          <a href="<?php echo BASE_URL . "/about-us" ?>">About us</a>
         </li>
         <li>
-          <a href="/contact-us">Contact us</a>
+          <a href="<?php echo BASE_URL . "/contact-us" ?>">Contact us</a>
         </li>
         <li>
-          <a href="/supporters/signin">Sign in</a>
+          <a href="<?php echo BASE_URL . "/supporters/signin" ?>">Sign in</a>
         </li>
       </ul>
       <ul class="nav-links">

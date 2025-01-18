@@ -37,7 +37,11 @@
           ?>
           <h1>Unauthorised. You are not a member</h1>
 
-          <p>You can become a member by submitting a monthly donation <a href="/donate">here</a></p>
+          <p>You can become a member by submitting a monthly donation
+            <a href="<?php echo BASE_URL . "/donate" ?>">
+              here
+            </a>
+          </p>
           <?php
         } else {
           ?>

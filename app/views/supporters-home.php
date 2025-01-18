@@ -32,13 +32,17 @@
           ?>
           <h1>Unauthorised. You are not a member</h1>
 
-          <p>You can become a member by submitting a monthly donation <a href="/donate">here</a></p>
+          <p>You can become a member by submitting a monthly donation
+            <a href="<?php echo BASE_URL . "/donate" ?>">here</a>
+          </p>
           <?php
         } else {
           ?>
           <h1>Supporters home</h1>
-          <a class="anchor-button large-anchor-button" style="margin-bottom: 1rem" href="/supporters/update">Update
-            supporter details</a>
+          <a class="anchor-button large-anchor-button" style="margin-bottom: 1rem"
+             href="<?php echo BASE_URL . "/supporters/update" ?>">
+            Update supporter details
+          </a>
           <h2>Supporters news</h2>
           <div class="news-article">
             <div class="reverse-header-img">
@@ -64,16 +68,16 @@
             </p>
             <p>
               Moreover, the money will contribute to our goal of supporting reptiles and fish, as detailed
-              <a href="/">here</a>. All pets, regardless of species, deserve a loving home, and with the
-              continued support of our community, we hope to create these facilities soon.
+              <a href="<?php echo BASE_URL . "/" ?>">here</a>. All pets, regardless of species, deserve a
+              loving home, and with the continued support of our community, we hope to create these facilities soon.
             </p>
             <p>
               Thank you to everyone who supports Preloved Pets. Together, we can help these pets find a new forever
               home.
-              If you would like to donate, please visit our <a href="/donate">donation page</a>. Volunteers are
-              extremely
-              appreciated and should contact us using one of the methods outlined <a href="/contact-us">here</a> or with
-              this email <a href="mailto:23056792@students.southwales.ac.uk?subject=Volunteer Request">23056792@students.southwales.ac.uk</a>.
+              If you would like to donate, please visit our <a href="<?php echo BASE_URL . "/donate" ?>">donation
+                page</a>. Volunteers are extremely appreciated and should contact us using one of the methods outlined
+              <a href="<?php echo BASE_URL . "/contact-us" ?>">here</a> or with this email
+              <a href="mailto:23056792@students.southwales.ac.uk?subject=Volunteer Request">23056792@students.southwales.ac.uk</a>.
             </p>
             <p>
           <span class="bold-text">
@@ -111,10 +115,11 @@
               coverage of pets.
             </p>
             <p>
-              To continue contributing to the goal, please donate <a href="/donate">here</a>.
-              <span class="bold-text">
-            Monthly donors can join the members club and receive a monthly exclusive newsletter!
-          </span>
+              To continue contributing to the goal, please donate <a href="<?php echo BASE_URL . "/donate" ?>">
+                here
+              </a>.<span class="bold-text">
+                Monthly donors can join the members club and receive a monthly exclusive newsletter!
+              </span>
             </p>
           </div>
           <div class="news-article">
@@ -144,9 +149,10 @@
               We are incredibly grateful to our generous donors who made this play area possible. Their contributions
               have
               helped us create a space where the pets can remain active even on rainy days. Thank you deeply for your
-              continued support. If you would like to donate, please visit our <a href="/donate">donation page</a>.
+              continued support. If you would like to donate, please visit our
+              <a href="<?php echo BASE_URL . "/donate" ?>">donation page</a>.
               Volunteers are extremely appreciated and should contact us using one of the methods outlined
-              <a href="/contact-us">here</a> or with this email
+              <a href="<?php echo BASE_URL . "/contact-us" ?>">here</a> or with this email
               <a href="mailto:23056792@students.southwales.ac.uk?subject=Volunteer Request">23056792@students.southwales.ac.uk</a>.
             </p>
             <p>

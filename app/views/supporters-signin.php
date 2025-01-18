@@ -9,15 +9,15 @@
       <h1>Supporters Club Login</h1>
       <p>
         Supporters club members are donors who selected the monthly donation
-        option on the <a href="/donate">donate form</a>.
+        option on the <a href="<?php echo BASE_URL . "/donate" ?>">donate form</a>.
       </p>
-      <form action="/supporters/home" method="post" class="donation-form">
+      <form action="<?php echo BASE_URL . "/supporters/home" ?>" method="post" class="donation-form">
         <h2>Sign in details</h2>
         <label for="email">
           Email:
           <input type="email" id="email" name="email" required>
         </label>
-        <button type="submit">Submit donation</button>
+        <button type="submit">Sign in to supporters club</button>
       </form>
     </main>
   </div>
