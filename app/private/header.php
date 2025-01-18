@@ -16,13 +16,13 @@
     <nav class="header-content">
       <ul class="nav-links header-links">
         <li class="header-logo">
-          <a href="<?php echo BASE_URL . BASE_FILE . "/" ?>">
+          <a href="<?php echo BASE_URL . BASE_FILE ?>">
             <img src="<?php echo BASE_URL . "/public/img/logo-text.svg" ?>" alt="Preloved pets logo" width="225"/>
             <span class="hidden-text">Preloved Pets</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo BASE_URL . BASE_FILE . "/" ?>">Home</a>
+          <a href="<?php echo BASE_URL . BASE_FILE ?>">Home</a>
         </li>
         <li>
           <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>">Donate</a>

@@ -28,7 +28,7 @@
         </p>
         <p>
           Moreover, the money will contribute to our goal of supporting reptiles and fish, as detailed
-          <a href="<?php echo BASE_URL . BASE_FILE . "/" ?>">here</a>. All pets, regardless of species, deserve a loving
+          <a href="<?php echo BASE_URL . BASE_FILE ?>">here</a>. All pets, regardless of species, deserve a loving
           home, and with the continued support of our community, we hope to create these facilities soon.
         </p>
         <p>

@@ -1,14 +1,14 @@
 <footer class="footer-wrapper">
   <div class="footer-content">
     <div class="footer-content-logo">
-      <a href="<?php echo BASE_URL . BASE_FILE . "/" ?>">
+      <a href="<?php echo BASE_URL . BASE_FILE ?>">
         <img src="<?php echo BASE_URL . "/public/img/logo.svg" ?>" alt="Logo - image of cat" width="75"/>
       </a>
     </div>
     <div class="footer-content-links">
       <ul class="nav-links">
         <li>
-          <a href="<?php echo BASE_URL . BASE_FILE . "/" ?>">Home</a>
+          <a href="<?php echo BASE_URL . BASE_FILE ?>">Home</a>
         </li>
         <li>
           <a href="<?php echo BASE_URL . BASE_FILE . "/donate" ?>">Donate</a>
