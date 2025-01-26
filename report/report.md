@@ -4,7 +4,7 @@ author: [Jake Real - 23056792]
 date: "13/12/2024"
 lang: "en"
 titlepage: true
-toc-own-page: true
+toc-own-page: false
 table-use-row-colors: true
 block-headings: true
 colorlinks: true
