@@ -349,27 +349,29 @@ therefore, it is important that website accessibility remains consistent across 
 desktop and mobile form factors. To achieve this, both a desktop and mobile
 wireframe and flow will be created for all pages.
 
+\pagebreak
+
 Homepage,
 
-![Desktop homepage](images/wireframes/desktop-home-page.png)
+![Desktop homepage](images/wireframes/desktop-home-page.png){ height=90%}
 
 ![Mobile homepage](images/wireframes/mobile-homepage.png)
 
 Donation page,
 
-![Desktop donation page](images/wireframes/desktop-home-page.png)
+![Desktop donation page](images/wireframes/desktop-home-page.png){ width=90% }
 
 ![Mobile donation page](images/wireframes/mobile-homepage.png)
 
 Pets page,
 
-![Desktop page](images/wireframes/desktop-pets.png)
+![Desktop page](images/wireframes/desktop-pets.png){ width=90% }
 
 ![Mobile page](images/wireframes/mobile-pets.png)
 
 News page,
 
-![Desktop news page](images/wireframes/desktop-news.png)
+![Desktop news page](images/wireframes/desktop-news.png){ height=90% }
 
 ![Mobile news page](images/wireframes/mobile-news.png)
 
@@ -389,7 +391,7 @@ Supporter club sign in page,
 
 ![Desktop sign in page ](images/wireframes/desktop-sign-in.png)
 
-![Mobile sign in page ](images/wireframes/mobile-sign-in.png)
+![Mobile sign in page ](images/wireframes/mobile-sign-in.png){ height=90% }
 
 Supporters club home page,
 
@@ -411,11 +413,15 @@ Supporters club home page,
 
 ![Mobile rehome wireflow](images/wireframes/flows/mobile-adopt-pet-flow.png)
 
+\pagebreak
+
 #### Sign in flow
 
 ![Desktop sign in wireflow](images/wireframes/flows/desktop-sign-in-flow.png)
 
 ![Mobile sign in wireflow](images/wireframes/flows/mobile-sign-in-flow.png)
+
+\pagebreak
 
 ##### Update supporter account details flow
 
